@@ -10,8 +10,9 @@
   My personal portfolio built with <a href="https://cli.vuejs.org/" target="_blank">Vue</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 
-
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/104ecf48-5682-4a6c-908e-4d1b1239ff67/deploy-status)](https://app.netlify.com/sites/vitaliy-ostapchuk/deploys)
+<p align="center">
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/0f588bc0-ccd8-48da-a1aa-6c031d81634a/deploy-status)](https://app.netlify.com/sites/vitaliy-ostapchuk/deploys)
+</p>
 
 
 ## 🛠 Installation & Set Up
