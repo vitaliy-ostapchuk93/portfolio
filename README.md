@@ -11,7 +11,9 @@
 </p>
 
 <p align="center">
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/0f588bc0-ccd8-48da-a1aa-6c031d81634a/deploy-status)](https://app.netlify.com/sites/vitaliy-ostapchuk/deploys)
+  <a href="https://app.netlify.com/sites/vitaliy-ostapchuk/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/0f588bc0-ccd8-48da-a1aa-6c031d81634a/deploy-status" alt="Netlify Status" />
+  </a>
 </p>
 
 
