@@ -19,20 +19,20 @@
 
 ## 🛠 Installation & Set Up
 
-1. Install the Vue CLI and upgrade it to latest version.
+#### Install the Vue CLI and upgrade it to latest version.
 
 ```
 yarn global add @vue/cli
 yarn global upgrade --latest @vue/cli
 ```
 
-2. Install dependencies
+#### Install dependencies
 
 ```
 yarn install
 ```
 
-4. Start the development server with hot-reloads for development
+#### Start the development server with hot-reloads for development
 
 ```
 yarn serve
@@ -45,6 +45,3 @@ yarn serve
 yarn build
 ```
 
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
