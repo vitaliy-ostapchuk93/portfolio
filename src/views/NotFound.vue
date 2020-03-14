@@ -103,7 +103,7 @@ export default {
 
 <style scoped>
 .container-inner {
-  background-color: #6ace7c;
+  background-color: #42b983;
   max-width: 100%;
   max-height: 100%;
 }
