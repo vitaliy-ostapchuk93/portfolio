@@ -20,7 +20,7 @@ const routes = [
     component: () => import("../views/NotFound.vue") },  
   { 
     path: '*',
-    redirect: 'NotFound'
+    redirect: '/404'
   }
 ];
 
