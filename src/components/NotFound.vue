@@ -73,7 +73,7 @@
           </g>
           <g id="web-page">
             <path
-              fill="#42b983"
+              fill="#fff"
               d="M399.1 259.1l-92.3 10.6V188l92.3-10.5v19.6z"
             />
             <path
@@ -95,6 +95,7 @@
               stroke-width="4"
               d="M338.4 239.8l32-3.9"
             />
+            <!--  <path id="mouth-smile" fill="none" stroke="#4f3e7c" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4" d="M341.1 240.5s15.4 10.5 27.3-3.5"/> -->
             <path
               id="mouth-frown"
               fill="none"
@@ -132,14 +133,15 @@
 <script>
 export default {
   metaInfo: {
-    title: 'Page Not Found'
+    title: 'NotFound'
   }
 }
 </script>
 
 <style scoped>
 .milk-404 {
-  max-height: 91vh;
+  max-height: 80%;
+  min-width: 40%;
 }
 #mouth-frown {
   visibility: hidden;
