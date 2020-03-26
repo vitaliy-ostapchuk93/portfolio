@@ -1,28 +1,12 @@
 import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 
+import messages from '@/assets/locales'
+
 Vue.use(VueI18n)
 
-const messages = {
-  de: {
-    message: {
-      hello: 'hallo welt'
-    }
-  },
-  en: {
-    message: {
-      hello: 'hello world'
-    }
-  },
-  es: {
-    message: {
-      hello: 'hola mundo'
-    }
-  }
-}
-
 export default new VueI18n({
-  fallbackLocale: 'en',
-  locale: 'en',
+  locale: 'de_DE',
+  fallbackLocale: 'en_US',
   messages
 })

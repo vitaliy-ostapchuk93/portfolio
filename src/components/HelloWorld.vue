@@ -10,7 +10,7 @@ v-layout(text-center wrap)
 
   v-flex(mb-4)
     h1.mb-6
-      .headline {{ $t("message.hello") }}
+      .headline {{ $t("hello") }}
       .display-3 {{ msg }}
 
     p.subheading.font-weight-regular
