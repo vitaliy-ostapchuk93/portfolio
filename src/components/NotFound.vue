@@ -54,7 +54,10 @@
             />
           </g>
           <g id="web-page">
-            <path fill="#42b983" d="M399.1 259.1l-92.3 10.6V188l92.3-10.5v19.6z" />
+            <path
+              fill="#42b983"
+              d="M399.1 259.1l-92.3 10.6V188l92.3-10.5v19.6z"
+            />
             <path
               fill="#aa9dce"
               d="M399.1 184.8l-92.3 10.5V188l92.3-10.5v1.5z"
@@ -74,7 +77,6 @@
               stroke-width="4"
               d="M338.4 239.8l32-3.9"
             />
-            <!--  <path id="mouth-smile" fill="none" stroke="#4f3e7c" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4" d="M341.1 240.5s15.4 10.5 27.3-3.5"/> -->
             <path
               id="mouth-frown"
               fill="none"
@@ -112,9 +114,9 @@
 <script>
 export default {
   metaInfo: {
-    title: "Page Not Found"
+    title: 'Page Not Found'
   }
-};
+}
 </script>
 
 <style scoped>
