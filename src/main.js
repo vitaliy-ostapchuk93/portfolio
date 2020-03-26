@@ -13,6 +13,13 @@ import i18n from './plugins/vue-i18n'
 import './plugins/vue2-filters'
 import './plugins/vuelidate'
 
+import { version } from '../package.json'
+
+
+/* eslint-disable no-console */
+console.log(`App version: ${version}`)
+console.log(`App locale: ${i18n.locale}`)
+/* eslint-enable no-console */
 
 Vue.config.productionTip = false
 
