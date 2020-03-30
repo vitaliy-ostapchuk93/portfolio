@@ -1,33 +1,21 @@
 <template lang="pug">
 v-app
-  v-app-bar(app)
-    v-toolbar-title.headline.text-uppercase
-      span.mr-2 Material
-      span.font-weight-light Design
-
-    v-spacer
-
-    v-btn(
-      text
-      href="https://github.com/vuetifyjs/vuetify/releases/latest"
-      rel="noopener"
-      target="_blank"
-    )
-      span Latest Release
-      v-icon(right) mdi-open-in-new
-
+  app-header
   v-content
     router-view
+  app-footer
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld
+    'app-header': Header,
+    'app-footer': Footer
   },
 
   data: () => ({
@@ -35,3 +23,6 @@ export default {
   })
 }
 </script>
+
+<style scoped>
+</style>

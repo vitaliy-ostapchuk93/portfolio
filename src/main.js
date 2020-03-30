@@ -14,6 +14,7 @@ import './plugins/vuelidate'
 
 import { version } from '../package.json'
 
+import './styles/main.sass'
 
 /* eslint-disable no-console */
 console.log(`App version: ${version}`)
