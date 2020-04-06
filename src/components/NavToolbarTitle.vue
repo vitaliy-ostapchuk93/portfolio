@@ -13,7 +13,7 @@ v-toolbar-title(
         height="24"
         width="24"
       )
-      span.m4 Vitaliy Ostapchuk
+      span Vitaliy Ostapchuk
 </template>
 
 <script>

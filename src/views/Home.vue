@@ -1,6 +1,5 @@
 <template lang="pug">
-v-container
-  hello-world(msg="Welcome to Vuetify")
+hello-world(msg="Welcome to Vuetify")
 </template>
 
 

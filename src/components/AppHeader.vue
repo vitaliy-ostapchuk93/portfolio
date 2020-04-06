@@ -11,7 +11,6 @@ v-app-bar(
     v-if="$vuetify.breakpoint.mdAndUp"
     :menu="menu"
   )
-
   nav-mobile-version(
     v-if="$vuetify.breakpoint.smAndDown"
     :menu="menu"
