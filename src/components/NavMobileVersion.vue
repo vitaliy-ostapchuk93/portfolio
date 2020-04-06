@@ -8,14 +8,15 @@ div
   v-navigation-drawer(
     app
     v-model="sidebar"
-    temporary
     class="primary"
     right
     width="100%"
+    hide-overlay
   )
     v-list(
       nav
       shaped
+      class="text-uppercase"
     )
       v-list-item
         v-list-item-icon
@@ -31,7 +32,9 @@ div
         v-app-bar-nav-icon(
           @click="sidebar = !sidebar"
         )
+
       v-divider
+
       v-list-item-group(
         v-model="menu"
       )
@@ -58,7 +61,8 @@ export default {
     }
   },
   data: () => ({
-    sidebar: false
+    sidebar: false,
+    home: '/home'
   })
 }
 </script>

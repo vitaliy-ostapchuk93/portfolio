@@ -7,13 +7,16 @@ v-toolbar-title(
       text
       href="/home"
     )
-      v-img(
-        :src="require('../assets/logo.svg')"
-        contain
-        height="24"
-        width="24"
-      )
-      span Vitaliy Ostapchuk
+      v-list-item
+        v-list-item-icon
+          v-img(
+            :src="require('../assets/logo.svg')"
+            contain
+            height="24"
+            width="24"
+          )
+        v-list-item-title
+          span Vitaliy Ostapchuk
 </template>
 
 <script>

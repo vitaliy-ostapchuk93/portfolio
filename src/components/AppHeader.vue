@@ -3,6 +3,7 @@ v-app-bar(
   app
   dark
   class="primary"
+  height="70"
 )
   nav-toolbar-title
   v-spacer
