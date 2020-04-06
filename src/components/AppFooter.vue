@@ -15,7 +15,7 @@ v-footer(
     )
       v-btn(
         v-for="profile in profiles"
-        :key="icon"
+        :key="profile.icon"
         class="mx-4"
         icon
         :href="profile.link"

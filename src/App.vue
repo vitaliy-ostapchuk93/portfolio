@@ -2,20 +2,23 @@
 v-app
   app-header
   v-content
-    router-view
+    v-container(
+      fluid
+    )
+      router-view
   app-footer
 </template>
 
 <script>
-import Header from './components/Header'
-import Footer from './components/Footer'
+import AppHeader from './components/AppHeader'
+import AppFooter from './components/AppFooter'
 
 export default {
   name: 'App',
 
   components: {
-    'app-header': Header,
-    'app-footer': Footer
+    'app-header': AppHeader,
+    'app-footer': AppFooter
   },
 
   data: () => ({
