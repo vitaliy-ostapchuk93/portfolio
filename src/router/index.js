@@ -19,6 +19,21 @@ const routes = [
     component: () => import('../views/About.vue')
   },
   {
+    path: '/impressum',
+    name: 'Impressum',
+    component: () => import('../views/Impressum.vue')
+  },
+  {
+    path: '/privacy-policy',
+    name: 'PrivacyPolicy',
+    component: () => import('../views/PrivacyPolicy.vue')
+  },
+  {
+    path: '/terms-of-service',
+    name: 'TermsOfService',
+    component: () => import('../views/TermsOfService.vue')
+  },
+  {
     path: '/404',
     name: 'NotFound',
     component: () => import('../components/NotFound.vue')
