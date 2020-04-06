@@ -72,16 +72,16 @@ export default {
     ],
     legalmenu: [
       {
-        link: '/impressum',
-        text: 'Impressum'
-      },
-      {
         link: '/privacy-policy',
         text: 'Privacy Policy'
       },
       {
         link: '/terms-of-service',
         text: 'Terms of Service'
+      },
+      {
+        link: '/impressum',
+        text: 'Impressum'
       }
     ]
   })
