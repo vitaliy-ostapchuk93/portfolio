@@ -80,7 +80,7 @@ export default {
       },
       {
         id: 'IMBI',
-        position: 'Woking Student',
+        position: 'Working Student',
         company: 'Institut für Medizinische Biometrie und Informatik',
         website: 'https://www.klinikum.uni-heidelberg.de/medizinische-biometrie/wir-ueber-uns/wir-ueber-uns',
         logo: require('../assets/work/IMBI.svg'),
