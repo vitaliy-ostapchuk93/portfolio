@@ -32,7 +32,7 @@ v-footer(
         v-for="item in legalmenu"
         :key="item.title"
         :href="item.link"
-        class="font-weight-thin"
+        class="font-weight-light overline"
         text
       )
         span {{item.text}}
@@ -40,7 +40,7 @@ v-footer(
     v-divider
 
     v-col(
-      class="py-3 text-center font-weight-light font-italic"
+      class="py-3 text-center font-weight-light font-italic body-2"
       cols="12"
     )
       | &copy; {{ new Date().getFullYear() }} — Designed & Built by Vitaliy Ostapchuk
