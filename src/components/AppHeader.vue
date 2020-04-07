@@ -26,9 +26,9 @@ import NavDesktopVersion from './NavDesktopVersion'
 export default {
   name: 'Header',
   components: {
-    'nav-toolbar-title': NavToolbarTitle,
-    'nav-mobile-version': NavMobileVersion,
-    'nav-desktop-version': NavDesktopVersion
+    NavToolbarTitle,
+    NavMobileVersion,
+    NavDesktopVersion
   },
   data: () => ({
     menu: [
