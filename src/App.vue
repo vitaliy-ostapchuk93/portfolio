@@ -28,10 +28,13 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .v-content{
   background-image: url('~@/assets/random-shapes.svg');
   background-repeat: repeat;
   background-size: 50px 50px;
+}
+.v-btn:hover{
+  background: #1362e2;
 }
 </style>

@@ -15,7 +15,7 @@ v-container(
         flat
       )
         v-card-text(
-          class="display-4 primary--text"
+          class="display-4 secondary--text"
         )
           p(
             class="font-weight-bold"
