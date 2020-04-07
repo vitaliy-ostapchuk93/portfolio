@@ -21,6 +21,7 @@ v-container(
             class="font-weight-bold"
           )
             | let's build something great!
+        br
         v-card-text(
           class="title primary--text"
         )
@@ -35,7 +36,7 @@ v-container(
           p(
             class="subtitle-2"
           )
-            | I'm a software engineer based in Stuttgart, Germany specializing in building (and occasionally designing) exceptional, high-quality applications and websites.
+            | I'm a 3D Software Engineer based in Stuttgart (Germany) specializing in building and occasionally designing exceptional, high-quality applications and websites.
 </template>
 
 <script>
