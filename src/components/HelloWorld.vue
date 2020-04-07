@@ -46,3 +46,9 @@ export default {
   })
 }
 </script>
+
+<style scoped>
+.v-card{
+  background-color: transparent;
+}
+</style>

@@ -18,8 +18,8 @@ export default {
   name: 'App',
 
   components: {
-    'app-header': AppHeader,
-    'app-footer': AppFooter
+    AppHeader,
+    AppFooter
   },
 
   data: () => ({
@@ -29,4 +29,9 @@ export default {
 </script>
 
 <style scoped>
+.v-content{
+  background-image: url('~@/assets/random-shapes.svg');
+  background-repeat: repeat;
+  background-size: 50px 50px;
+}
 </style>
