@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueGtag from 'vue-gtag'
 
 Vue.use(VueRouter)
 
@@ -63,5 +64,15 @@ const router = new VueRouter({
   mode: 'history',
   routes
 })
+
+Vue.use(
+  VueGtag,
+  {
+    config: {
+      id: 'UA-41251044-2'
+    }
+  },
+  router
+)
 
 export default router
