@@ -61,6 +61,12 @@ v-card(
 </template>
 
 <script>
+export default {
+  name: 'Impressum',
+  data: () => ({
+    // ...
+  })
+}
 </script>
 
 <style scoped>

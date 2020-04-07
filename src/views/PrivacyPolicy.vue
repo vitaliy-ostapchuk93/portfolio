@@ -95,6 +95,12 @@ v-card(
 </template>
 
 <script>
+export default {
+  name: 'PrivacyPolicy',
+  data: () => ({
+    // ...
+  })
+}
 </script>
 
 <style scoped>

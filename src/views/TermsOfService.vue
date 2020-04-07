@@ -148,6 +148,12 @@ v-card(
 </template>
 
 <script>
+export default {
+  name: 'TermsOfService',
+  data: () => ({
+    // ...
+  })
+}
 </script>
 
 <style scoped>
