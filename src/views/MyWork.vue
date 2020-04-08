@@ -3,7 +3,7 @@ v-container(
   fluid
 )
   v-card(
-   class="main-container mx-auto"
+   class="transparent-bg mx-auto"
    max-width="1200"
    flat
   )
@@ -104,7 +104,4 @@ export default {
 </script>
 
 <style scoped>
-.main-container {
-  background-color: transparent;
-}
 </style>
