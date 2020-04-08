@@ -26,41 +26,57 @@ v-container(
         v-card(
           class="mx-auto"
           max-width="600"
+          min-width="300px"
           outlined
         )
-          v-list-item(
-            three-line
+          v-container(
+            fluid
           )
-            v-list-item-content
-              div(
-                class="overline"
-              )
-                p {{item.position}} &#64;
-              div(
-                class="headline"
-              )
-                p {{item.company}}
-              v-list-item-subtitle(
-                v-if="item.website"
-              )
-                a(
-                  :href="item.website"
-                  target="_blank"
-                ) Visit website of {{item.id}}
-
-            v-list-item-avatar(
-              tile
-              min-width="150"
-              min-height="50"
+            v-layout(
+              row
+              wrap
+              class="pa-4 align-center"
             )
-              v-img(
-                :src="item.logo"
-                contain
-                height="100px"
-                max-width="200px"
+              v-flex(
+                xs12
               )
-          v-card-text(class="text--primary")
-            p {{item.description}}
+                v-card-title(
+                  primary-title
+                  class="overline"
+                )
+                  h2 {{item.position}} &#64;
+
+              v-flex(
+                xs8
+              )
+                v-card-title(
+                  primary-title
+                  class="headline"
+                )
+                  a(
+                    v-if="item.website"
+                    :href="item.website"
+                    target="_blank"
+                  ) {{item.company}}
+                v-card-title(
+                  v-if="!item.website"
+                  primary-title
+                  class="headline"
+                ) {{item.company}}
+
+              v-flex(
+                xs3
+              )
+                v-img(
+                  :src="item.logo"
+                  contain
+                )
+
+              v-flex(
+                xs12
+              )
+                v-card-text(class="text--primary")
+                  p {{item.description}}
 </template>
 
 <script>
@@ -83,7 +99,7 @@ export default {
         position: 'Working Student',
         company: 'Institut für Medizinische Biometrie und Informatik',
         website: 'https://www.klinikum.uni-heidelberg.de/medizinische-biometrie/wir-ueber-uns/wir-ueber-uns',
-        logo: require('../assets/work/IMBI.svg'),
+        logo: require('../assets/work/IMBI.png'),
         yearStart: 2016,
         yearEnd: 2017,
         description: 'The Department of Biometry at the Institute of Medical Biometry and Informatics (IMBI) has many years of extensive expertise in both biometric-statistical method development and consulting as well as in the planning, implementation and evaluation of patient-oriented research projects. The IMBI is involved in a wide range of activities in university and non-university teaching, as well as in the part-time Master course in Medical Biometry/Biostatistics. The research projects supervised by the IMBI working groups cover the entire spectrum of medical disciplines and include clinical therapy studies of all phases, diagnostic and prognosis studies, genetic studies, observational and evaluation studies, systematic reviews and clinical registries.'
@@ -91,7 +107,7 @@ export default {
       {
         id: 'Freelance',
         position: 'Freelancer',
-        company: 'Multiple Companies ...',
+        company: 'Multiple Companies',
         website: '',
         logo: require('../assets/work/Freelancer.png'),
         yearStart: 2013,
