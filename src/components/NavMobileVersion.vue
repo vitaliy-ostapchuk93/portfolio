@@ -29,9 +29,13 @@ div
         v-list-item-title
           span Vitaliy Ostapchuk
         v-spacer
-        v-app-bar-nav-icon(
-          @click="sidebar = !sidebar"
-        )
+        v-app-bar-nav-icon
+          v-btn(
+            @click="sidebar = !sidebar"
+            class="mx-4"
+            icon
+          )
+            v-icon(size="24px") mdi-close
 
       v-divider
 
