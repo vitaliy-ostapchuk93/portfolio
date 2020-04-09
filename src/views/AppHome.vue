@@ -7,8 +7,8 @@ v-container(
    max-width="800"
    flat
   )
-    v-card-text(
-      class="tagline secondary--text font-weight-bold"
+    v-card-title(
+      class="tagline secondary--text font-weight-bold py-12"
     )
       p(
         v-if="$vuetify.breakpoint.mdAndUp"
@@ -18,9 +18,8 @@ v-container(
         class="display-3"
         v-if="$vuetify.breakpoint.smAndDown"
       ) {{tagline}}
-    br
-    v-card-text(
-      class="title primary--text"
+    v-card-subtitle(
+      class="title primary--text py-10"
     )
       p(
         class="font-weight-bold"
@@ -28,6 +27,9 @@ v-container(
       p(
         class="display-1 font-weight-bold"
       ) {{name}}
+    v-card-text(
+      class="primary--text"
+    )
       p(
         class="subtitle-1"
       ) {{description}}
