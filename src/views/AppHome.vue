@@ -8,31 +8,39 @@ v-container(
    flat
   )
     v-card-text(
-      class="display-4 secondary--text"
+      class="tagline secondary--text font-weight-bold"
     )
       p(
-        class="tagline font-weight-bold"
-      ) let's build something great!
+        v-if="$vuetify.breakpoint.mdAndUp"
+        class="display-4"
+      ) {{tagline}}
+      p(
+        class="display-3"
+        v-if="$vuetify.breakpoint.smAndDown"
+      ) {{tagline}}
     br
     v-card-text(
       class="title primary--text"
     )
       p(
         class="font-weight-bold"
-      ) Hi, my name is
+      ) {{intro}}
       p(
         class="display-1 font-weight-bold"
-      ) Vitaliy Ostapchuk.
+      ) {{name}}
       p(
-        class="subtitle-2"
-      ) I'm a 3D Software Engineer based in Stuttgart (Germany) specializing in building and occasionally designing exceptional, high-quality applications and websites.
+        class="subtitle-1"
+      ) {{description}}
 </template>
 
 <script>
 export default {
   name: 'Home',
   data: () => ({
-    // ...
+    tagline: 'let`s build something great!',
+    intro: 'Hi, my name is',
+    name: 'Vitaliy Ostapchuk.',
+    description: 'I`m a 3D Software Engineer based in Stuttgart (Germany) specializing in building and occasionally designing exceptional, high-quality applications and websites.'
   })
 }
 </script>
