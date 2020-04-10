@@ -29,9 +29,8 @@ export default {
 </script>
 
 <style>
-.v-content{
-  background-image: url('~@/assets/random-shapes.svg');
+.v-content {
+  background-image: url('~@/assets/pattern.svg');
   background-repeat: repeat;
-  background-size: 50px 50px;
 }
 </style>
