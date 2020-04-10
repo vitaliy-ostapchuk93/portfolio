@@ -140,11 +140,9 @@ v-card(
     strong Contact Us
     p.
       If you have any questions about these Terms and Conditions, You can contact us:
-    | Telefon:
-    i  0173 / 27 47 492
     br
     | E-Mail:
-    i  vitaliy_os@yahoo.de
+    i  vitaliy.ostapchuk93@gmail.com
 </template>
 
 <script>

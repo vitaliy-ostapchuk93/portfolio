@@ -24,11 +24,8 @@ v-card(
   v-card-text
     strong Kontakt
     br
-    | Telefon:
-    i  0173 / 27 47 492
-    br
     | E-Mail:
-    i  vitaliy_os@yahoo.de
+    i  vitaliy.ostapchuk93@gmail.com
   v-card-text(
     class="text-uppercase"
   )
