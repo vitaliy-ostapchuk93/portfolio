@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Screenshot" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/public/screenshot.png" width="100" />
+  <img alt="Screenshot" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/public/screenshot.png"/>
 </div>
 
 <h1 align="center">
