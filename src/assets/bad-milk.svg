@@ -27,7 +27,5 @@
       <circle id="eye-right-open" cx="375.3" cy="215.6" r="5" fill="#050038" />
       <circle id="eye-left-open" cx="330.9" cy="220" r="5" fill="#050038" />
     </g>
-    <!-- /#eyes -->
   </g>
-  <!-- /#milk-face -->
 </svg>

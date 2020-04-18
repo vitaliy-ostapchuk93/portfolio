@@ -17,9 +17,7 @@ v-layout(text-center wrap)
 
 <script>
 export default {
-  metaInfo: {
-    title: 'NotFound'
-  }
+  name: 'NotFound'
 }
 </script>
 

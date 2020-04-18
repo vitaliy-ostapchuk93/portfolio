@@ -29,8 +29,4 @@ export default {
 </script>
 
 <style>
-.v-content {
-  background-image: url('~@/assets/pattern.svg');
-  background-repeat: repeat;
-}
 </style>

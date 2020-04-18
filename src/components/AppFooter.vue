@@ -2,11 +2,12 @@
 v-footer(
   padless
   dark
-  class="primary"
 )
   v-row(
     justify="center"
     no-gutters
+    class="primary"
+
   )
     v-col(
       class="py-4 text-center"
@@ -88,4 +89,7 @@ export default {
 </script>
 
 <style scoped>
+.footer-img {
+  background-color: transparent;
+}
 </style>
