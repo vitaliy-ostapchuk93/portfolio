@@ -1,7 +1,3 @@
-<div align="center">
-  <img alt="Screenshot" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/public/screenshot.png"/>
-</div>
-
 <h1 align="center">
   https://vitaliy-ostapchuk.netlify.com
 </h1>
@@ -12,9 +8,13 @@
 
 <p align="center">
   <a href="https://app.netlify.com/sites/vitaliy-ostapchuk/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/0f588bc0-ccd8-48da-a1aa-6c031d81634a/deploy-status" alt="Netlify Status" />
+    <img src="https://api.netlify.com/api/v1/badges/b6c5547f-f1fd-4a39-87ae-ff147ffe99ac/deploy-status" alt="Netlify Status" />
   </a>
 </p>
+
+<div align="center">
+  <img alt="Screenshot" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/public/screenshot.png"/>
+</div>
 
 
 ## 🛠 Installation & Set Up
