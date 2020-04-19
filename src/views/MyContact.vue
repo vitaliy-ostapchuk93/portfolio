@@ -7,22 +7,22 @@ v-container(
    max-width="800"
    flat
   )
-    v-card-title
+    v-card-title(
+      class="secondary--text"
+    )
       p(
         class="display-2 layout justify-center"
       ) {{title}}
 
-    v-card-text(
-      class="title primary--text py-10"
-    )
+    v-card-text
       v-row(
         justify="space-around"
       )
         v-avatar(
-           size="250"
+          size="400"
         )
           img(
-            src="https://cdn.vuetifyjs.com/images/john.jpg"
+            :src="require('../assets/profile.jpg')"
             alt="Vitaliy Ostapchuk"
           )
     v-card-text(
@@ -35,10 +35,7 @@ v-container(
       )
         p {{description}}
     v-card-actions
-      v-btn(
-        outlined
-        color="secondary"
-      ) Button
+
 </template>
 
 <script>
