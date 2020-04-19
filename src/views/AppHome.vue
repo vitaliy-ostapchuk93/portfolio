@@ -8,7 +8,7 @@ v-container(
    flat
   )
     v-card-title(
-      class="tagline secondary--text font-weight-bold py-12"
+      class="tagline accent--text font-weight-bold py-12"
     )
       p(
         v-if="$vuetify.breakpoint.mdAndUp"
@@ -19,19 +19,17 @@ v-container(
         v-if="$vuetify.breakpoint.smAndDown"
       ) {{tagline}}
     v-card-subtitle(
-      class="title primary--text py-10"
+      class="title py-10"
     )
       p(
-        class="font-weight-bold"
+        class="font-weight-bold primary--text"
       ) {{intro}}
       p(
-        class="display-1 font-weight-bold"
+        class="display-1 font-weight-bold secondary--text"
       ) {{name}}
-    v-card-text(
-      class="primary--text"
-    )
+    v-card-text
       p(
-        class="subtitle-1"
+        class="title primary--text"
       ) {{description}}
 </template>
 
@@ -39,10 +37,10 @@ v-container(
 export default {
   name: 'Home',
   data: () => ({
-    tagline: 'let`s build something great!',
+    tagline: "let's build something great!",
     intro: 'Hi, my name is',
     name: 'Vitaliy Ostapchuk.',
-    description: 'I`m a 3D Software Engineer based in Stuttgart (Germany) specializing in building and occasionally designing exceptional, high-quality applications and websites.'
+    description: "I'm a 3D Software Engineer based in Stuttgart (Germany) specializing in building and occasionally designing exceptional, high-quality applications and websites."
   })
 }
 </script>
