@@ -19,15 +19,7 @@ div
       class="text-uppercase"
     )
       v-list-item
-        v-list-item-icon
-          v-img(
-            :src="require('../assets/logo.svg')"
-            contain
-            height="24"
-            width="24"
-          )
-        v-list-item-title
-          span Vitaliy Ostapchuk
+        app-logo
         v-spacer
         v-app-bar-nav-icon
           v-btn(
@@ -56,8 +48,13 @@ div
 </template>
 
 <script>
+import AppLogo from './AppLogo'
+
 export default {
   name: 'NavMobileVersion',
+  components: {
+    AppLogo
+  },
   props: {
     menu: {
       type: Array,

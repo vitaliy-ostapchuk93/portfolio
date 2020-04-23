@@ -5,7 +5,7 @@ v-app-bar(
   class="primary"
   height="70"
 )
-  nav-toolbar-title
+  app-logo
   v-spacer
 
   nav-desktop-version(
@@ -19,14 +19,14 @@ v-app-bar(
 </template>
 
 <script>
-import NavToolbarTitle from './NavToolbarTitle'
+import AppLogo from './AppLogo'
 import NavMobileVersion from './NavMobileVersion'
 import NavDesktopVersion from './NavDesktopVersion'
 
 export default {
   name: 'Header',
   components: {
-    NavToolbarTitle,
+    AppLogo,
     NavMobileVersion,
     NavDesktopVersion
   },
