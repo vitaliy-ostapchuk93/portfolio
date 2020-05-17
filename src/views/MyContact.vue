@@ -14,17 +14,16 @@ v-container(
         class="display-2 layout justify-center"
       ) {{title}}
 
-    v-card-text
-      v-row(
-        justify="space-around"
+    v-card-subtitle(
+      class="display-2 layout justify-center"
+    )
+      v-avatar(
+        size="350"
       )
-        v-avatar(
-          size="400"
+        img(
+          :src="require('../assets/profile.jpg')"
+          alt="Vitaliy Ostapchuk"
         )
-          img(
-            :src="require('../assets/profile.jpg')"
-            alt="Vitaliy Ostapchuk"
-          )
     v-card-text(
       class="title primary--text py-10"
     )

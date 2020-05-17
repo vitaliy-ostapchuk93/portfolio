@@ -33,27 +33,53 @@ div
 
       v-list-item-group(
         v-model="menu"
+        class="pa-4"
       )
-        v-list-item(
-          v-for="item in menu"
-          :key="item.link"
-          :title="item.title"
-          :href="item.link"
-          text
-        )
-          v-list-item-icon
-            v-icon(left) {{item.icon}}
-          v-list-item-title
-            span {{item.text}}
+        v-container
+          v-list-item(
+            v-for="item in menu"
+            :key="item.link"
+            :title="item.title"
+            :href="item.link"
+            class="mx-4"
+            text
+          )
+            v-list-item-icon
+              v-icon(left) {{item.icon}}
+            v-list-item-title
+              span {{item.text}}
+
+      scpacer
+
+      v-list-item(
+        class="pa-4"
+      )
+        social-networks
+
+      v-list-item(
+        class="pa-4"
+      )
+        v-container
+          p(
+            class="mx-4"
+          )
+            i Vitaliy Ostapchuk
+            br
+            i +49 (0)173 27 47 492
+            br
+            i vitaliy.ostapchuk93@gmail.com
+
 </template>
 
 <script>
 import AppLogo from './AppLogo'
+import SocialNetworks from './SocialNetworks'
 
 export default {
   name: 'NavMobileVersion',
   components: {
-    AppLogo
+    AppLogo,
+    SocialNetworks
   },
   props: {
     menu: {

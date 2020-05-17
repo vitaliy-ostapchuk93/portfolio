@@ -4,7 +4,7 @@ v-container(
 )
   v-card(
     class="mx-auto transparent-bg"
-    v-bind:class="{ 'd-flex' : $vuetify.breakpoint.lgAndUp }"
+    :class="{ 'd-flex' : $vuetify.breakpoint.lgAndUp }"
     flat
   )
     v-card(
@@ -37,7 +37,7 @@ v-container(
         ) {{description}}
     v-card(
       class="mx-auto transparent-bg d-flex align-self-end"
-      v-bind:class="{ 'desktopFlex' : $vuetify.breakpoint.mdAndUp }"
+      :class="{ 'desktopFlex' : $vuetify.breakpoint.mdAndUp }"
       flat
     )
       v-img(

@@ -13,15 +13,7 @@ v-footer(
       class="py-4 text-center"
       cols="12"
     )
-      v-btn(
-        v-for="profile in profiles"
-        :key="profile.icon"
-        :href="profile.link"
-        target="_blank"
-        class="mx-4"
-        icon
-      )
-        v-icon(size="24px") {{profile.icon}}
+      social-networks
 
     v-divider
 
@@ -49,27 +41,14 @@ v-footer(
 </template>
 
 <script>
+import SocialNetworks from './SocialNetworks'
+
 export default {
   name: 'Footer',
+  components: {
+    SocialNetworks
+  },
   data: () => ({
-    profiles: [
-      {
-        icon: 'mdi-twitter',
-        link: 'https://twitter.com/vitaliy_ostapch'
-      },
-      {
-        icon: 'mdi-linkedin',
-        link: 'https://www.linkedin.com/in/vitaliy-ostapchuk/'
-      },
-      {
-        icon: 'mdi-github',
-        link: 'https://github.com/vitaliy-ostapchuk93'
-      },
-      {
-        icon: 'mdi-email',
-        link: 'mailto:vitaliy.ostapchuk93@gmail.com'
-      }
-    ],
     legalmenu: [
       {
         link: '/privacy-policy',
@@ -89,7 +68,4 @@ export default {
 </script>
 
 <style scoped>
-.footer-img {
-  background-color: transparent;
-}
 </style>
