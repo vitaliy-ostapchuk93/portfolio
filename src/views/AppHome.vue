@@ -5,9 +5,11 @@ v-container(
   v-card(
     class="mx-auto transparent-bg"
     v-bind:class="{ 'd-flex' : $vuetify.breakpoint.lgAndUp }"
+    flat
   )
     v-card(
       class="mx-auto transparent-bg pa-2"
+      flat
     )
       v-card-title(
         class="accent--text font-weight-bold py-12"
@@ -36,6 +38,7 @@ v-container(
     v-card(
       class="mx-auto transparent-bg d-flex align-self-end"
       v-bind:class="{ 'desktopFlex' : $vuetify.breakpoint.mdAndUp }"
+      flat
     )
       v-img(
         :src="require('../assets/bird.svg')"
