@@ -34,7 +34,7 @@ v-container(
           class="title primary--text"
         ) {{description}}
     v-card(
-      class="mx-auto transparent-bg d-flex justify-center"
+      class="mx-auto transparent-bg d-flex align-self-end"
       v-bind:class="{ 'desktopFlex' : $vuetify.breakpoint.mdAndUp }"
     )
       v-img(
