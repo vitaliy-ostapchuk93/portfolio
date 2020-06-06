@@ -1,6 +1,6 @@
 <template lang="pug">
 v-container(
-  min-width="350px"
+  min-width="360px"
 )
   v-btn(
     v-for="profile in profiles"

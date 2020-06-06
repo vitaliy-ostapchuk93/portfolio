@@ -24,7 +24,7 @@ div
         v-app-bar-nav-icon
           v-btn(
             @click="sidebar = !sidebar"
-            class="mx-4"
+            class="my-4"
             icon
           )
             v-icon(size="24px") mdi-close
@@ -35,39 +35,28 @@ div
         v-model="menu"
         class="pa-4"
       )
-        v-container
-          v-list-item(
-            v-for="item in menu"
-            :key="item.link"
-            :title="item.title"
-            :href="item.link"
-            class="mx-4"
-            text
-          )
-            v-list-item-icon
-              v-icon(left) {{item.icon}}
-            v-list-item-title
-              span {{item.text}}
+        v-list-item(
+          v-for="item in menu"
+          :key="item.link"
+          :title="item.title"
+          :href="item.link"
+          class="my-4"
+          text
+        )
+          v-list-item-icon
+            v-icon(left) {{item.icon}}
+          v-list-item-title
+            span {{item.text}}
 
       scpacer
 
-      v-list-item(
-        class="pa-4"
-      )
+      v-container
         social-networks
+        p(
+          class="my-4 font-weight-light font-italic body-2"
+        )
+          | &copy; {{ new Date().getFullYear() }} — Designed & Built by Vitaliy Ostapchuk
 
-      v-list-item(
-        class="pa-4"
-      )
-        v-container
-          p(
-            class="mx-4"
-          )
-            i Vitaliy Ostapchuk
-            br
-            i +49 (0)173 27 47 492
-            br
-            i vitaliy.ostapchuk93@gmail.com
 
 </template>
 
