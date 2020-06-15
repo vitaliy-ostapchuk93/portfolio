@@ -48,7 +48,7 @@ div
           v-list-item-title
             span {{item.text}}
 
-      scpacer
+      v-spacer
 
       v-container
         social-networks

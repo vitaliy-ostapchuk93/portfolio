@@ -20,14 +20,24 @@ const routes = [
     component: () => import('../views/AboutMe.vue')
   },
   {
+    path: '/experience',
+    name: 'Experience',
+    component: () => import('../views/MyExperience.vue')
+  },
+  {
     path: '/work',
     name: 'Work',
     component: () => import('../views/MyWork.vue')
   },
   {
-    path: '/experience',
-    name: 'Experience',
-    component: () => import('../views/MyExperience.vue')
+    path: '/education',
+    name: 'Education',
+    component: () => import('../views/MyEducation.vue')
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: () => import('../views/MyProjects.vue')
   },
   {
     path: '/contact',

@@ -1,82 +1,76 @@
 <template lang="pug">
-v-card(
-  class="transparent-bg mx-auto"
-  max-width="1200"
-  min-width="450"
-  flat
+v-timeline(
+  :dense="$vuetify.breakpoint.smAndDown"
+  reverse
 )
-  v-timeline(
-    :dense="$vuetify.breakpoint.smAndDown"
-    reverse
+  v-timeline-item(
+    v-for="item in work"
+    :key="item.id"
+    color="secondary"
+    :small="$vuetify.breakpoint.smAndDown"
   )
-    v-timeline-item(
-      v-for="item in work"
-      :key="item.id"
-      color="secondary"
-      :small="$vuetify.breakpoint.smAndDown"
+    template(
+      v-slot:opposite
     )
-      template(
-        v-slot:opposite
+      span(
+        class="headline font-weight-bold primary--text"
       )
-        span(
-          class="headline font-weight-bold primary--text"
-        )
-          | {{item.yearStart}} - {{item.yearEnd}}
+        | {{item.yearStart}} - {{item.yearEnd}}
 
-      v-card(
-        class="mx-auto"
-        max-width="600"
-        min-width="300px"
-        outlined
+    v-card(
+      class="mx-auto"
+      max-width="600"
+      min-width="300px"
+      outlined
+    )
+      v-container(
+        fluid
       )
-        v-container(
-          fluid
+        v-layout(
+          row
+          wrap
+          class="pa-4 align-center"
         )
-          v-layout(
-            row
-            wrap
-            class="pa-4 align-center"
+          v-flex(
+            xs12
           )
-            v-flex(
-              xs12
+            v-card-title(
+              primary-title
+              class="overline secondary--text"
             )
-              v-card-title(
-                primary-title
-                class="overline secondary--text"
-              )
-                h2 {{item.position}} &#64;
+              h2 {{item.position}} &#64;
 
-            v-flex(
-              xs8
+          v-flex(
+            xs8
+          )
+            v-card-title(
+              primary-title
+              class="headline"
             )
-              v-card-title(
-                primary-title
-                class="headline"
-              )
-                a(
-                  v-if="item.website"
-                  :href="item.website"
-                  target="_blank"
-                ) {{item.company}}
-              v-card-title(
-                v-if="!item.website"
-                primary-title
-                class="headline"
+              a(
+                v-if="item.website"
+                :href="item.website"
+                target="_blank"
               ) {{item.company}}
+            v-card-title(
+              v-if="!item.website"
+              primary-title
+              class="headline"
+            ) {{item.company}}
 
-            v-flex(
-              xs3
+          v-flex(
+            xs3
+          )
+            v-img(
+              :src="item.logo"
+              contain
             )
-              v-img(
-                :src="item.logo"
-                contain
-              )
 
-            v-flex(
-              xs12
-            )
-              v-card-text(class="text--primary")
-                p {{item.description}}
+          v-flex(
+            xs12
+          )
+            v-card-text(class="text--primary")
+              p {{item.description}}
 </template>
 
 <script>

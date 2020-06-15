@@ -45,12 +45,6 @@ export default {
         text: 'About'
       },
       {
-        icon: 'mdi-briefcase',
-        link: '/work',
-        title: 'Where I\'ve worked',
-        text: 'Work'
-      },
-      {
         icon: 'mdi-electron-framework',
         link: '/experience',
         title: 'Portfolio & some things I\'ve built',
