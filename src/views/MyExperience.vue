@@ -63,7 +63,7 @@ v-container
       ) mdi-rocket-launch
       p(
         class="ma-4 accent--text font-weight-medium text-uppercase display-1"
-      ) Projects
+      ) Projects &amp; Other
     v-card-text
       my-projects
 

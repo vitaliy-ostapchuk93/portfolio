@@ -3,79 +3,27 @@ v-timeline(
   :dense="$vuetify.breakpoint.smAndDown"
   reverse
 )
-  v-timeline-item(
+  timeline-item(
     v-for="item in work"
     :key="item.id"
-    color="secondary"
-    :small="$vuetify.breakpoint.smAndDown"
+    :yearStart="item.yearStart"
+    :yearEnd="item.yearEnd"
+    :head="item.position"
+    :title="item.company"
+    :logo="item.logo"
+    :link="item.website"
+    :description="item.description"
   )
-    template(
-      v-slot:opposite
-    )
-      span(
-        class="headline font-weight-bold primary--text"
-      )
-        | {{item.yearStart}} - {{item.yearEnd}}
-
-    v-card(
-      class="mx-auto"
-      max-width="600"
-      min-width="300px"
-      outlined
-    )
-      v-container(
-        fluid
-      )
-        v-layout(
-          row
-          wrap
-          class="pa-4 align-center"
-        )
-          v-flex(
-            xs12
-          )
-            v-card-title(
-              primary-title
-              class="overline secondary--text"
-            )
-              h2 {{item.position}} &#64;
-
-          v-flex(
-            xs8
-          )
-            v-card-title(
-              primary-title
-              class="headline"
-            )
-              a(
-                v-if="item.website"
-                :href="item.website"
-                target="_blank"
-              ) {{item.company}}
-            v-card-title(
-              v-if="!item.website"
-              primary-title
-              class="headline"
-            ) {{item.company}}
-
-          v-flex(
-            xs3
-          )
-            v-img(
-              :src="item.logo"
-              contain
-            )
-
-          v-flex(
-            xs12
-          )
-            v-card-text(class="text--primary")
-              p {{item.description}}
 </template>
 
 <script>
+import TimelineItem from '../components/TimelineItem'
+
 export default {
   name: 'Work',
+  components: {
+    TimelineItem
+  },
   data: () => ({
     work: [
       {
