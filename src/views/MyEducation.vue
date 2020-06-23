@@ -125,7 +125,7 @@ export default {
         ],
         yearStart: 2013,
         yearEnd: 2017,
-        thesis: 'Entwurf und Implementierung einer Software-Komponente zur Oberflächenabtastung von Fibulatransplantaten für die navigationsgestützte Mandibularekonstruktion'
+        thesis: 'Design and implementation of a software component for surface scanning of fibula grafts for navigation-assisted mandibular reconstruction'
       }
     ]
   })
