@@ -1,6 +1,7 @@
 <template lang="pug">
 v-timeline-item(
   color="secondary"
+  :small="$vuetify.breakpoint.smAndDown"
 )
   template(
     v-slot:opposite
@@ -13,7 +14,6 @@ v-timeline-item(
   v-card(
     class="pa-md-4 mx-lg-auto"
     max-width="600"
-    min-width="300px"
     outlined
   )
 
@@ -24,6 +24,14 @@ v-timeline-item(
       h2 {{head}} &#64;
 
     timeline-item-title(
+      v-if="$vuetify.breakpoint.mdAndUp"
+      :itemTitle="title"
+      :itemLogo="logo"
+      :itemLink="link"
+    )
+
+    timeline-item-title-mobile(
+      v-if="$vuetify.breakpoint.smAndDown"
       :itemTitle="title"
       :itemLogo="logo"
       :itemLink="link"
@@ -36,12 +44,14 @@ v-timeline-item(
 
 <script>
 import TimelineItemTitle from './TimelineItemTitle'
+import TimelineItemTitleMobile from './TimelineItemTitleMobile'
 import TimelineItemDescription from './TimelineItemDescription'
 
 export default {
   name: 'TimelineItem',
   components: {
     TimelineItemTitle,
+    TimelineItemTitleMobile,
     TimelineItemDescription
   },
   props: {
@@ -54,7 +64,7 @@ export default {
       required: true
     },
     logo: {
-      type: [Object, Array],
+      type: [String, Array],
       required: true
     },
     yearStart: {
@@ -66,7 +76,7 @@ export default {
       required: true
     },
     description: {
-      type: String,
+      type: [String, Object],
       required: true
     },
     link: {

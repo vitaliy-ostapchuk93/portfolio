@@ -36,7 +36,7 @@ export default {
   name: 'TimelineItemTitle',
   props: {
     itemDescription: {
-      type: [String, Array],
+      type: [String, Object],
       required: true
     }
   },

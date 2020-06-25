@@ -3,16 +3,13 @@ v-card-title(
   primary-title
   class="headline"
 )
-
   v-layout(
     v-if="typeof(itemTitle) === 'string'"
     row
     wrap
     class="px-4"
   )
-    v-flex(
-      xs7
-    )
+    v-flex
       a(
         v-if="itemLink"
         :href="itemLink"
@@ -21,13 +18,13 @@ v-card-title(
       p(
         v-if="!itemLink"
       ) {{itemTitle}}
-    v-flex(
-      xs4
-      class="mx-auto"
-    )
+
+    v-flex
       v-img(
         :src="itemLogo"
         contain
+        class="align-self-center py-6"
+        max-width="60%"
       )
 
   v-layout(
@@ -58,8 +55,8 @@ v-card-title(
       v-for="logo in itemLogo"
       :key="logo"
       :src="logo"
-      class="align-self-center mx-3"
-      width="30%"
+      class="align-self-center py-6"
+      max-width="60%"
       contain
     )
 </template>

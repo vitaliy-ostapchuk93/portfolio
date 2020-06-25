@@ -63,7 +63,8 @@ export default {
         website: 'http://eng.tmu.edu.tw/',
         logo: require('../assets/education/logo_tmu.png'),
         yearStart: 2018,
-        yearEnd: 2019
+        yearEnd: 2019,
+        description: ''
       },
       {
         id: 'BACHELOR',
@@ -96,7 +97,8 @@ export default {
         website: 'https://www.fdg-frankfurt.de/',
         logo: require('../assets/education/logo_fdg.png'),
         yearStart: 2010,
-        yearEnd: 2013
+        yearEnd: 2013,
+        description: ''
       },
       {
         id: 'HIGHSCHOOL2',
@@ -105,7 +107,8 @@ export default {
         website: 'https://www.etown.k12.ky.us/1/Home',
         logo: require('../assets/education/logo_etown.png'),
         yearStart: 2010,
-        yearEnd: 2011
+        yearEnd: 2011,
+        description: ''
       },
       {
         id: 'MIDDLESCHOOL',
@@ -114,7 +117,8 @@ export default {
         website: 'https://www.leibnizschule-ffm.de/',
         logo: require('../assets/education/logo_leibnizschule.png'),
         yearStart: 2005,
-        yearEnd: 2010
+        yearEnd: 2010,
+        description: ''
       }
     ]
   })

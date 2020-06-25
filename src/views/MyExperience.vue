@@ -1,8 +1,9 @@
 <template lang="pug">
-v-container
+v-container(
+  class="pa-0"
+)
   v-card(
     class="mx-auto"
-    min-width="410"
     flat
   )
     v-card-title(
@@ -16,7 +17,9 @@ v-container
       p(
         class="ma-4 accent--text font-weight-medium text-uppercase display-1"
       ) Work
-    v-card-text
+    v-card-text(
+      class="pa-0"
+    )
       my-work
 
   v-divider(
@@ -26,7 +29,6 @@ v-container
 
   v-card(
     class="mx-auto"
-    min-width="410"
     flat
   )
     v-card-title(
@@ -40,7 +42,9 @@ v-container
       p(
         class="ma-4 accent--text font-weight-medium text-uppercase display-1"
       ) Education
-    v-card-text
+    v-card-text(
+      class="pa-0"
+    )
       my-education
 
   v-divider(
@@ -50,7 +54,6 @@ v-container
 
   v-card(
     class="mx-auto"
-    min-width="410"
     flat
   )
     v-card-title(
@@ -64,7 +67,9 @@ v-container
       p(
         class="ma-4 accent--text font-weight-medium text-uppercase display-1"
       ) Projects &amp; Other
-    v-card-text
+    v-card-text(
+      class="pa-0"
+    )
       my-projects
 
 </template>
