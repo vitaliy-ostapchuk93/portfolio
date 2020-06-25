@@ -7,7 +7,7 @@ v-container(
     flat
   )
     v-card-title(
-      class="justify-center"
+      class="px-0 justify-center"
     )
       v-icon(
         large
@@ -32,7 +32,7 @@ v-container(
     flat
   )
     v-card-title(
-      class="justify-center"
+      class="px-0 justify-center"
     )
       v-icon(
         large
@@ -57,7 +57,7 @@ v-container(
     flat
   )
     v-card-title(
-      class="justify-center"
+      class="px-0 justify-center"
     )
       v-icon(
         large
