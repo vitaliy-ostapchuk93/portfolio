@@ -68,4 +68,7 @@ export default {
 </script>
 
 <style scoped>
+.v-btn:hover {
+  background: #1362e2;
+}
 </style>
