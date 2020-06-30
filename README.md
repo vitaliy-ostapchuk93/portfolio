@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/src/assets/projects/portfolio/home-desktop.png"/>
+  <img alt="Logo" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/src/assets/logo-transparent.svg" width="150"/>
 </div>
 
 <h1 align="center">
@@ -15,15 +15,17 @@
     <img src="https://api.netlify.com/api/v1/badges/b6c5547f-f1fd-4a39-87ae-ff147ffe99ac/deploy-status" alt="Netlify Status" />
   </a>
 </p>
+
 <div align="center">
-  <img alt="Screenshot" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/src/assets/logo-transparent-short.svg" width="150"/>
+  <img alt="Screenshot" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/src/assets/projects/portfolio/home-desktop.png"/>
 </div>
+
 
 ## 🚨 Forking this repo (please read!)
 
 I value keeping my site open source, but as you all know, _**plagiarism is bad**_. It's always disheartening whenever I find that someone has copied my site without giving me credit. I spent a non-trivial amount of effort building and designing this iteration of my website, and I am proud of it! All I ask of you all is to not claim this effort as your own.
 
-### TL;DR
+#### TL;DR
 
 Yes, you can fork this repo. Please give me proper credit by linking back to [vitaliy-ostapchuk.netlify.com](https://vitaliy-ostapchuk.netlify.com). Thanks!
 
