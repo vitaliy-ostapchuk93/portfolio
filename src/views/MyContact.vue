@@ -36,6 +36,7 @@ v-container(
                 v-model="name"
                 :error-messages="nameErrors"
                 label="Name"
+                name="name"
                 required
                 @input="$v.name.$touch()"
                 @blur="$v.name.$touch()"
@@ -44,6 +45,7 @@ v-container(
                 v-model="email"
                 :error-messages="emailErrors"
                 label="E-mail"
+                name="email"
                 required
                 @input="$v.email.$touch()"
                 @blur="$v.email.$touch()"
@@ -52,6 +54,7 @@ v-container(
                 v-model="message"
                 :error-messages="messageErrors"
                 label="Message"
+                name="message"
                 required
                 @input="$v.message.$touch()"
                 @blur="$v.message.$touch()"
