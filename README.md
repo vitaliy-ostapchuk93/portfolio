@@ -1,3 +1,7 @@
+<div align="center">
+  <img alt="Logo" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/src/assets/projects/portfolio/home-desktop.png"/>
+</div>
+
 <h1 align="center">
   https://vitaliy-ostapchuk.netlify.com
 </h1>
@@ -11,10 +15,17 @@
     <img src="https://api.netlify.com/api/v1/badges/b6c5547f-f1fd-4a39-87ae-ff147ffe99ac/deploy-status" alt="Netlify Status" />
   </a>
 </p>
-
 <div align="center">
-  <img alt="Screenshot" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/public/screenshot.png"/>
+  <img alt="Screenshot" src="https://github.com/vitaliy-ostapchuk93/portfolio/blob/master/src/assets/logo-transparent-short.svg" width="150"/>
 </div>
+
+## 🚨 Forking this repo (please read!)
+
+I value keeping my site open source, but as you all know, _**plagiarism is bad**_. It's always disheartening whenever I find that someone has copied my site without giving me credit. I spent a non-trivial amount of effort building and designing this iteration of my website, and I am proud of it! All I ask of you all is to not claim this effort as your own.
+
+### TL;DR
+
+Yes, you can fork this repo. Please give me proper credit by linking back to [vitaliy-ostapchuk.netlify.com](https://vitaliy-ostapchuk.netlify.com). Thanks!
 
 
 ## 🛠 Installation & Set Up
@@ -45,3 +56,14 @@ yarn serve
 yarn build
 ```
 
+## 🎨 Color Reference
+
+| Color          | Hex                                                                |
+| -------------- | ------------------------------------------------------------------ |
+| primary        | ![#050038](https://via.placeholder.com/10/050038?text=+) `#050038` |
+| secondary      | ![#1362e2](https://via.placeholder.com/10/1362e2?text=+) `#1362e2` |
+| accent         | ![#f24d00](https://via.placeholder.com/10/f24d00?text=+) `#f24d00` |
+| error          | ![#D50000](https://via.placeholder.com/10/D50000?text=+) `#D50000` |
+| info           | ![#2196F3](https://via.placeholder.com/10/2196F3?text=+) `#2196F3` |
+| success        | ![#4CAF50](https://via.placeholder.com/10/4CAF50?text=+) `#4CAF50` |
+| warning        | ![#FFC107](https://via.placeholder.com/10/FFC107?text=+) `#FFC107` |
