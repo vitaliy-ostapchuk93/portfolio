@@ -29,7 +29,8 @@ v-container(
           )
             form(
               name="contact"
-              method="post"
+              method="POST"
+              netlify
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             )
@@ -149,7 +150,6 @@ export default {
       axios.post(
         '/',
         this.encode({
-          'form-name': 'contact',
           name: this.name,
           email: this.email,
           message: this.message
