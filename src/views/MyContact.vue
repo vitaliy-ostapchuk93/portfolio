@@ -29,7 +29,9 @@ v-container(
           )
             form(
               name="contact"
-              method="POST"
+              method="post"
+              v-on:submit.prevent="handleSubmit"
+                action="/success/"
               netlify
               data-netlify="true"
               data-netlify-honeypot="bot-field"
@@ -81,7 +83,6 @@ v-container(
                     color="primary lighten-2"
                     text
                     type="submit"
-                    @click="handleSubmit"
                   ) {{submitBtn}}
                   v-btn(
                     color="primary lighten-2"
@@ -158,7 +159,7 @@ export default {
       ).then(() => {
         this.$router.push('/thanks')
       }).catch(() => {
-        this.$router.push('404')
+        this.$router.push('/404')
       })
     },
     handleClear () {
