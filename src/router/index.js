@@ -45,6 +45,11 @@ const routes = [
     component: () => import('../views/MyContact.vue')
   },
   {
+    path: '/thanks',
+    name: 'SubmissionSuccess',
+    component: () => import('../components/SubmissionSuccess.vue')
+  },
+  {
     path: '/impressum',
     name: 'Impressum',
     component: () => import('../views/Impressum.vue')

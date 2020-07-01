@@ -29,9 +29,15 @@ v-container(
           )
             form(
               name="contact"
-              method="POST"
+              method="post"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
             )
+              input(
+                type="hidden"
+                name="form-name"
+                value="contact"
+              )
               v-text-field(
                 v-model="name"
                 :error-messages="nameErrors"
@@ -74,11 +80,12 @@ v-container(
                     color="primary lighten-2"
                     text
                     type="submit"
+                    @click="handleSubmit"
                   ) {{submitBtn}}
                   v-btn(
                     color="primary lighten-2"
                     text
-                    @click="clear"
+                    @click="handleClear"
                   ) {{clearBtn}}
 
 </template>
@@ -86,6 +93,7 @@ v-container(
 <script>
 import { validationMixin } from 'vuelidate'
 import { required, email } from 'vuelidate/lib/validators'
+import axios from 'axios'
 
 export default {
   name: 'Contact',
@@ -126,10 +134,34 @@ export default {
     }
   },
   methods: {
-    submit () {
-      this.$v.$touch()
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
     },
-    clear () {
+    handleSubmit () {
+      this.$v.$touch()
+      const axiosConfig = {
+        header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      }
+      axios.post(
+        '/',
+        this.encode({
+          'form-name': 'contact',
+          name: this.name,
+          email: this.email,
+          message: this.message
+        }),
+        axiosConfig
+      ).then(() => {
+        this.$router.push('/thanks')
+      }).catch(() => {
+        this.$router.push('404')
+      })
+    },
+    handleClear () {
       this.$v.$reset()
       this.name = ''
       this.email = ''
