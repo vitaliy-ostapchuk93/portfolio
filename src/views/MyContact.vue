@@ -74,7 +74,6 @@ v-container(
                     color="primary lighten-2"
                     text
                     type="submit"
-                    @click="submit"
                   ) {{submitBtn}}
                   v-btn(
                     color="primary lighten-2"
