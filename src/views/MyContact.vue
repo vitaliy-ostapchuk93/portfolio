@@ -144,6 +144,7 @@ export default {
       axios.post(
         '/',
         this.encode({
+          'form-name': 'contact',
           name: this.name,
           email: this.email,
           message: this.message
