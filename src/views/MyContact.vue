@@ -30,7 +30,6 @@ v-container(
             form(
               name="contact"
               method="post"
-              action="/thanks"
               netlify
               data-netlify="true"
             )
