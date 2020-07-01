@@ -30,10 +30,9 @@ v-container(
             form(
               name="contact"
               method="post"
-              v-on:submit.prevent="handleSubmit"
+              action="/thanks"
               netlify
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
             )
               input(
                 type="hidden"
@@ -75,6 +74,7 @@ v-container(
                   color="primary lighten-2"
                   text
                   type="submit"
+                  @click="handleSubmit"
                 ) {{submitBtn}}
                 v-btn(
                   color="primary lighten-2"
