@@ -30,8 +30,8 @@ v-container(
             form(
               name="contact"
               method="post"
-              netlify
               data-netlify="true"
+              @submit.prevent="handleSubmit"
             )
               input(
                 type="hidden"
@@ -73,7 +73,6 @@ v-container(
                   color="primary lighten-2"
                   text
                   type="submit"
-                  @click="handleSubmit"
                 ) {{submitBtn}}
                 v-btn(
                   color="primary lighten-2"
@@ -128,11 +127,11 @@ export default {
   },
   methods: {
     encode (data) {
-      return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&')
+      const formData = new FormData()
+      for (const key of Object.keys(data)) {
+        formData.append(key, data[key])
+      }
+      return formData
     },
     handleSubmit () {
       this.$v.$touch()
