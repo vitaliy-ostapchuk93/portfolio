@@ -75,10 +75,6 @@ v-container(
                 v-row(
                   justify="center"
                 )
-                  div(data-netlify-recaptcha="true")
-                v-row(
-                  justify="center"
-                )
                   v-btn(
                     color="primary lighten-2"
                     text
