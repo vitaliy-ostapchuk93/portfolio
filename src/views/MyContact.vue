@@ -31,7 +31,6 @@ v-container(
               name="contact"
               method="post"
               v-on:submit.prevent="handleSubmit"
-                action="/success/"
               netlify
               data-netlify="true"
               data-netlify-honeypot="bot-field"
@@ -69,19 +68,19 @@ v-container(
                 @blur="$v.message.$touch()"
               )
 
-        v-row(
-          justify="center"
-        )
-          v-btn(
-            color="primary lighten-2"
-            text
-            type="submit"
-          ) {{submitBtn}}
-          v-btn(
-            color="primary lighten-2"
-            text
-            @click="handleClear"
-          ) {{clearBtn}}
+              v-row(
+                justify="center"
+              )
+                v-btn(
+                  color="primary lighten-2"
+                  text
+                  type="submit"
+                ) {{submitBtn}}
+                v-btn(
+                  color="primary lighten-2"
+                  text
+                  @click="handleClear"
+                ) {{clearBtn}}
 
 </template>
 
