@@ -80,7 +80,6 @@ v-container(
                   color="primary lighten-2"
                   class="pa-4"
                   text
-                  type="submit"
                   @click="handleSubmit"
                 ) {{submitBtn}}
                 v-btn(
@@ -151,7 +150,6 @@ export default {
         .join('&')
     },
     handleSubmit () {
-      // this.$v.$touch()
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
