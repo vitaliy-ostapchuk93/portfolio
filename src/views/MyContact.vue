@@ -29,10 +29,9 @@ v-container(
           )
             form(
               name="contact"
-              method="post"
+              method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              @submit.prevent="handleSubmit"
             )
               input(
                 type="hidden"
@@ -70,16 +69,18 @@ v-container(
               v-row(
                 justify="center"
               )
+                div(
+                  data-netlify-recaptcha="true"
+                )
+              v-row(
+                justify="center"
+              )
                 button(
-                  color="primary lighten-2"
                   class="pa-4"
-                  text
                   type="submit"
                 ) {{submitBtn}}
                 button(
-                  color="primary lighten-2"
                   class="pa-4"
-                  text
                   @click="handleClear"
                 ) {{clearBtn}}
 
