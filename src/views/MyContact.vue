@@ -69,13 +69,15 @@ v-container(
               v-row(
                 justify="center"
               )
-                v-btn(
+                button(
                   color="primary lighten-2"
+                  class="pa-4"
                   text
                   type="submit"
                 ) {{submitBtn}}
-                v-btn(
+                button(
                   color="primary lighten-2"
+                  class="pa-4"
                   text
                   @click="handleClear"
                 ) {{clearBtn}}
@@ -105,6 +107,13 @@ export default {
     clearBtn: 'Clear'
   }),
   computed: {
+    form () {
+      return {
+        name: this.name,
+        email: this.email,
+        message: this.message
+      }
+    },
     nameErrors () {
       const errors = []
       if (!this.$v.name.$dirty) return errors
@@ -127,11 +136,11 @@ export default {
   },
   methods: {
     encode (data) {
-      const formData = new FormData()
-      for (const key of Object.keys(data)) {
-        formData.append(key, data[key])
-      }
-      return formData
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
     },
     handleSubmit () {
       this.$v.$touch()
@@ -142,15 +151,13 @@ export default {
         '/',
         this.encode({
           'form-name': 'contact',
-          name: this.name,
-          email: this.email,
-          message: this.message
+          ...this.form
         }),
         axiosConfig
       ).then(() => {
-        this.$router.push('/thanks')
+        this.$router.push('thanks')
       }).catch(() => {
-        this.$router.push('/404')
+        this.$router.push('404')
       })
     },
     handleClear () {
