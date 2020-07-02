@@ -34,6 +34,7 @@ v-container(
               netlify
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              @submit.prevent="handleSubmit"
             )
               input(
                 type="hidden"
@@ -83,7 +84,6 @@ v-container(
                   class="pa-4"
                   text
                   type="submit"
-                  @click="handleSubmit"
                 ) {{submitBtn}}
                 v-btn(
                   color="primary lighten-2"
@@ -97,7 +97,6 @@ v-container(
 <script>
 import { validationMixin } from 'vuelidate'
 import { required, email } from 'vuelidate/lib/validators'
-import axios from 'axios'
 
 export default {
   name: 'Contact',
@@ -153,11 +152,12 @@ export default {
         .join('&')
     },
     handleSubmit () {
+      this.$v.$touch()
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
-      axios.post(
-        '/',
+      this.axios.post(
+        '/contact',
         this.encode({
           'form-name': 'contact',
           ...this.form

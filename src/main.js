@@ -16,12 +16,16 @@ import { version } from '../package.json'
 
 import './styles/main.sass'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 /* eslint-disable no-console */
 console.log(`App version: ${version}`)
 console.log(`App locale: ${i18n.locale}`)
 /* eslint-enable no-console */
 
 Vue.config.productionTip = false
+Vue.use(VueAxios, axios)
 
 new Vue({
   router,
