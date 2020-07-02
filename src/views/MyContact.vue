@@ -5,92 +5,85 @@ v-container(
   v-card(
    class="mx-auto"
    max-width="800"
-   flat
   )
     v-card-title(
-      class="secondary--text display-2 layout justify-center"
+      class="secondary--text display-2 layout justify-center pt-12"
     ) {{title}}
 
     v-card-text(
-      class="title primary--text py-10"
+      class="title primary--text pa-12"
     ) {{description}}
 
     v-card-actions(
-      class="primary--text py-10 "
+      class="primary--text layout justify-center py-10 "
     )
-      v-container(
-        fluid
+      v-col(
+        :cols="9"
       )
-        v-row(
-           justify="center"
+        form(
+          name="contact"
+          method="POST"
+          action="/thanks"
+          netlify
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          @submit.prevent="handleSubmit"
         )
-          v-col(
-            :cols="9"
+          input(
+            type="hidden"
+            name="form-name"
+            value="contact"
           )
-            form(
-              name="contact"
-              method="POST"
-              action="/thanks"
-              netlify
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              @submit.prevent="handleSubmit"
+          v-text-field(
+            v-model="name"
+            :error-messages="nameErrors"
+            label="Name"
+            name="name"
+            required
+            @input="$v.name.$touch()"
+            @blur="$v.name.$touch()"
+          )
+          v-text-field(
+            v-model="email"
+            :error-messages="emailErrors"
+            label="E-mail"
+            name="email"
+            required
+            @input="$v.email.$touch()"
+            @blur="$v.email.$touch()"
+          )
+          v-textarea(
+            v-model="message"
+            :error-messages="messageErrors"
+            label="Message"
+            name="message"
+            required
+            @input="$v.message.$touch()"
+            @blur="$v.message.$touch()"
+          )
+
+          v-row(
+            justify="center"
+          )
+            div(
+              data-netlify-recaptcha="true"
             )
-              input(
-                type="hidden"
-                name="form-name"
-                value="contact"
-              )
-              v-text-field(
-                v-model="name"
-                :error-messages="nameErrors"
-                label="Name"
-                name="name"
-                required
-                @input="$v.name.$touch()"
-                @blur="$v.name.$touch()"
-              )
-              v-text-field(
-                v-model="email"
-                :error-messages="emailErrors"
-                label="E-mail"
-                name="email"
-                required
-                @input="$v.email.$touch()"
-                @blur="$v.email.$touch()"
-              )
-              v-textarea(
-                v-model="message"
-                :error-messages="messageErrors"
-                label="Message"
-                name="message"
-                required
-                @input="$v.message.$touch()"
-                @blur="$v.message.$touch()"
-              )
 
-              v-row(
-                justify="center"
-              )
-                div(
-                  data-netlify-recaptcha="true"
-                )
-
-              v-row(
-                justify="center"
-              )
-                v-btn(
-                  color="primary lighten-2"
-                  class="pa-4"
-                  text
-                  type="submit"
-                ) {{submitBtn}}
-                v-btn(
-                  color="primary lighten-2"
-                  class="pa-4"
-                  text
-                  @click="handleClear"
-                ) {{clearBtn}}
+          v-row(
+            justify="center"
+          )
+            v-btn(
+              color="primary lighten-2"
+              class="pa-4"
+              text
+              type="submit"
+            ) {{submitBtn}}
+            v-btn(
+              color="primary lighten-2"
+              class="pa-4"
+              text
+              @click="handleClear"
+            ) {{clearBtn}}
 
 </template>
 

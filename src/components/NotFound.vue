@@ -1,6 +1,11 @@
 <template lang="pug">
-v-layout(text-center wrap)
-  v-flex(xs12)
+v-layout(
+  text-center
+  wrap
+)
+  v-flex(
+    xs12
+  )
     a(
       href='https://www.freepik.com/free-vector/404-error-design-with-milk_1535244.htm'
       target="_blank"
