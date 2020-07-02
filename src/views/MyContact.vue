@@ -72,15 +72,21 @@ v-container(
                 div(
                   data-netlify-recaptcha="true"
                 )
+
               v-row(
                 justify="center"
               )
-                button(
+                v-btn(
+                  color="primary lighten-2"
                   class="pa-4"
+                  text
                   type="submit"
+                  @click="handleSubmit"
                 ) {{submitBtn}}
-                button(
+                v-btn(
+                  color="primary lighten-2"
                   class="pa-4"
+                  text
                   @click="handleClear"
                 ) {{clearBtn}}
 
@@ -145,7 +151,7 @@ export default {
         .join('&')
     },
     handleSubmit () {
-      this.$v.$touch()
+      // this.$v.$touch()
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
