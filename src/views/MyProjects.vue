@@ -11,6 +11,8 @@ v-container
         :projectDescription="project.description"
         :projectPictures="project.pictures"
         :projectTags="project.tags"
+        :projectLink="project.link"
+        :projectGit="project.git"
       )
 
 </template>
@@ -40,8 +42,12 @@ export default {
           'Tomcat',
           'Jenkins',
           'Pattern Mining',
-          'Big Data'
-        ]
+          'Big Data',
+          'HTML',
+          'CSS'
+        ],
+        link: 'https://opus-hshn.bsz-bw.de/frontdoor/index/index/searchtype/all/docId/169/start/3/rows/10',
+        git: 'https://github.com/vitaliy-ostapchuk93/disease-pattern-miner'
       },
       {
         name: 'ARA',
@@ -61,7 +67,8 @@ export default {
           'C#',
           'Python',
           'Raspberry Pi'
-        ]
+        ],
+        link: 'https://ieeexplore.ieee.org/abstract/document/8904800/keywords#keywords'
       },
       {
         name: 'Portfolio',
@@ -79,8 +86,13 @@ export default {
           'YARN',
           'JavaScript',
           'Express',
-          'Vuetify'
-        ]
+          'Vuetify',
+          'NodeJS',
+          'SASS',
+          'Pug'
+        ],
+        link: 'https://vitaliy-ostapchuk.netlify.app',
+        git: 'https://github.com/vitaliy-ostapchuk93/portfolio'
       },
       {
         name: 'Navigation-assisted fibula reconstruction',

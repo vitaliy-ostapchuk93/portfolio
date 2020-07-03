@@ -48,10 +48,23 @@ v-card(
 
   v-card-actions
     v-btn(
+      v-if="projectLink"
+      :href="projectLink"
+      target="_blank"
+      class="mx-2"
       color="primary lighten-2"
-      text
-      @click="reserve"
-    ) Reserve
+      icon
+    )
+      v-icon(size="24px") mdi-open-in-new
+    v-btn(
+      v-if="projectGit"
+      :href="projectGit"
+      target="_blank"
+      class="mx-2"
+      color="primary lighten-2"
+      icon
+    )
+      v-icon(size="24px") mdi-github
 </template>
 
 <script>
@@ -73,6 +86,16 @@ export default {
     projectTags: {
       type: Array,
       required: true
+    },
+    projectLink: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    projectGit: {
+      type: String,
+      required: false,
+      default: ''
     }
   },
   data: () => ({
