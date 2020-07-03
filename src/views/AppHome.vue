@@ -40,8 +40,4 @@ export default {
 
 
 <style scoped>
-
-.desktopFlex {
-  max-width: 60%;
-}
 </style>

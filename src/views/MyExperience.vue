@@ -7,7 +7,7 @@ v-container(
     flat
   )
     v-card-title(
-      class="px-0 justify-center"
+      class="px-0 justify-center accent--text"
     )
       v-icon(
         large
@@ -15,8 +15,9 @@ v-container(
         class="ma-4"
       ) mdi-briefcase
       p(
-        class="ma-4 accent--text font-weight-medium text-uppercase display-1"
-      ) Work
+        class="ma-4 accent--text font-weight-medium text-uppercase display-2"
+      ) {{work}}
+
     v-card-text(
       class="pa-0"
     )
@@ -32,7 +33,7 @@ v-container(
     flat
   )
     v-card-title(
-      class="px-0 justify-center"
+      class="px-0 justify-center accent--text"
     )
       v-icon(
         large
@@ -40,7 +41,7 @@ v-container(
         class="ma-4"
       ) mdi-school
       p(
-        class="ma-4 accent--text font-weight-medium text-uppercase display-1"
+        class="ma-4 font-weight-medium text-uppercase display-2"
       ) Education
     v-card-text(
       class="pa-0"
@@ -57,7 +58,7 @@ v-container(
     flat
   )
     v-card-title(
-      class="px-0 justify-center"
+      class="px-0 justify-center accent--text"
     )
       v-icon(
         large
@@ -65,7 +66,7 @@ v-container(
         class="ma-4"
       ) mdi-rocket-launch
       p(
-        class="ma-4 accent--text font-weight-medium text-uppercase display-1"
+        class="ma-4 font-weight-medium text-uppercase display-2"
       ) Projects &amp; Other
     v-card-text(
       class="pa-0"
@@ -87,7 +88,9 @@ export default {
     MyProjects
   },
   data: () => ({
-    // ...
+    work: 'Work',
+    education: 'Education',
+    projects: 'Projects &amp; Other'
   })
 }
 </script>

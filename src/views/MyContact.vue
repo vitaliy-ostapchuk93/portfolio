@@ -1,12 +1,19 @@
 <template lang="pug">
-
 v-card(
   class="mx-auto fill-height"
   max-width="800"
 )
   v-card-title(
-    class="secondary--text display-2 layout justify-center pt-12"
-  ) {{title}}
+    class="accent--text font-weight-bold layout justify-center pt-12"
+  )
+    p(
+      v-if="$vuetify.breakpoint.lgAndUp"
+      class="tagline display-4"
+    ) {{title}}
+    p(
+      class="display-3"
+      v-if="$vuetify.breakpoint.mdAndDown"
+    ) {{title}}
 
   v-card-text(
     class="title primary--text pa-12"
@@ -97,7 +104,7 @@ export default {
     message: { required }
   },
   data: () => ({
-    title: 'Get In Touch!',
+    title: 'get in touch!',
     description: "Although I'm not currently looking for freelance opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!",
     name: '',
     email: '',
@@ -170,4 +177,8 @@ export default {
 </script>
 
 <style scoped>
+.tagline {
+  font-family: Gilroy-Thin!important;
+  font-size: 7rem!important;
+}
 </style>
