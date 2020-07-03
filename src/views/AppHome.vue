@@ -2,76 +2,44 @@
 v-container(
   fluid
 )
-  v-card(
-    class="mx-auto transparent-bg"
-    :class="{ 'd-flex' : $vuetify.breakpoint.lgAndUp }"
-    flat
+  v-row(
+    v-if="$vuetify.breakpoint.lgAndUp"
   )
-    v-card(
-      class="mx-auto transparent-bg pa-2"
-      flat
+    v-col(
+      cols="5"
     )
-      v-card-title(
-        class="accent--text font-weight-bold py-12"
-      )
-        p(
-          v-if="$vuetify.breakpoint.mdAndUp"
-          class="tagline display-4"
-        ) {{tagline}}
-        p(
-          class="display-3"
-          v-if="$vuetify.breakpoint.smAndDown"
-        ) {{tagline}}
-      v-card-subtitle(
-        class="title py-10"
-      )
-        p(
-          class="font-weight-bold primary--text"
-        ) {{intro}}
-        p(
-          class="display-1 font-weight-bold secondary--text"
-        ) {{name}}
-      v-card-text
-        p(
-          class="title primary--text"
-        ) {{description}}
-    v-card(
-      class="mx-auto transparent-bg d-flex align-self-end"
-      :class="{ 'desktopFlex' : $vuetify.breakpoint.mdAndUp }"
-      flat
+      home-text
+    v-col(
+      cols="7"
+      class="align-self-end"
     )
-      v-img(
-        :src="require('../assets/bird.svg')"
-        class="img-bird align-self-center"
-        width="20%"
-        contain
-      )
-      v-img(
-        :src="require('../assets/holo2.png')"
-        class="img-holo align-self-end"
-        width="40%"
-        contain
-      )
+      home-logo
+
+  v-row(
+    v-if="$vuetify.breakpoint.mdAndDown"
+  )
+    home-text
+    home-logo
 </template>
 
 <script>
+import HomeLogo from '../components/HomeLogo'
+import HomeText from '../components/HomeText'
+
 export default {
   name: 'Home',
+  components: {
+    HomeLogo,
+    HomeText
+  },
   data: () => ({
-    tagline: "let's build something great!",
-    intro: 'Hi, my name is',
-    name: 'Vitaliy Ostapchuk.',
-    description: "I'm a 3D Software Engineer based in Stuttgart (Germany) specializing in building and occasionally designing exceptional, high-quality applications and websites."
+    // ...
   })
 }
 </script>
 
 
 <style scoped>
-.tagline {
-  font-family: Gilroy-Thin!important;
-  font-size: 7rem!important;
-}
 
 .desktopFlex {
   max-width: 60%;

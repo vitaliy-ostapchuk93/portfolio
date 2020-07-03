@@ -4,7 +4,7 @@ v-app
   v-content
     v-container(
       fluid
-      class="p-4"
+      class="pa-4 fill-height"
     )
       router-view
   app-footer
@@ -16,12 +16,10 @@ import AppFooter from './components/AppFooter'
 
 export default {
   name: 'App',
-
   components: {
     AppHeader,
     AppFooter
   },
-
   data: () => ({
     //
   })

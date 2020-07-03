@@ -3,7 +3,7 @@ v-container(
   fluid
 )
   v-card(
-   class="mx-auto"
+   class="mx-auto fill-height"
    max-width="800"
   )
     v-card-title(
