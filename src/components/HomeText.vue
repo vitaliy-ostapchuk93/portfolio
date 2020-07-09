@@ -7,7 +7,12 @@ v-card(
     class="accent--text py-8"
   )
     p(
+      v-if="$vuetify.breakpoint.lgAndUp"
       class="tagline font-weight-medium display-4"
+    ) {{tagline}}
+    p(
+      v-if="$vuetify.breakpoint.mdAndDown"
+      class="tagline font-weight-medium display-2"
     ) {{tagline}}
 
   v-card-subtitle(

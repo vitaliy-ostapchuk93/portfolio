@@ -7,7 +7,12 @@ v-card(
     class="accent--text layout justify-center pt-12"
   )
     p(
+      v-if="$vuetify.breakpoint.lgAndUp"
       class="tagline font-weight-medium display-4"
+    ) {{title}}
+    p(
+      v-if="$vuetify.breakpoint.mdAndDown"
+      class="tagline font-weight-medium display-2"
     ) {{title}}
 
   v-card-text(
