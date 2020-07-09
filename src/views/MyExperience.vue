@@ -10,12 +10,12 @@ v-container(
       class="px-0 justify-center accent--text"
     )
       v-icon(
-        large
+        x-large
         color="accent"
         class="ma-4"
       ) mdi-briefcase
       p(
-        class="ma-4 accent--text font-weight-medium text-uppercase display-2"
+        class="tagline ma-4 font-weight-medium display-2"
       ) {{work}}
 
     v-card-text(
@@ -41,8 +41,8 @@ v-container(
         class="ma-4"
       ) mdi-school
       p(
-        class="ma-4 font-weight-medium text-uppercase display-2"
-      ) Education
+        class="tagline ma-4 font-weight-medium display-2"
+      ) {{education}}
     v-card-text(
       class="pa-0"
     )
@@ -66,8 +66,8 @@ v-container(
         class="ma-4"
       ) mdi-rocket-launch
       p(
-        class="ma-4 font-weight-medium text-uppercase display-2"
-      ) Projects &amp; Other
+        class="tagline ma-4 font-weight-medium display-2"
+      ) {{projects}}
     v-card-text(
       class="pa-0"
     )
@@ -90,10 +90,13 @@ export default {
   data: () => ({
     work: 'Work',
     education: 'Education',
-    projects: 'Projects &amp; Other'
+    projects: 'Projects & Other'
   })
 }
 </script>
 
 <style scoped>
+.tagline {
+  font-family: Gilroy-Thin!important;
+}
 </style>

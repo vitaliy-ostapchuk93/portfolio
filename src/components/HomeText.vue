@@ -4,16 +4,12 @@ v-card(
   flat
 )
   v-card-title(
-    class="accent--text font-weight-bold py-12"
+    class="accent--text py-8"
   )
     p(
-      v-if="$vuetify.breakpoint.lgAndUp"
-      class="tagline display-4"
+      class="tagline font-weight-medium display-4"
     ) {{tagline}}
-    p(
-      class="display-3"
-      v-if="$vuetify.breakpoint.mdAndDown"
-    ) {{tagline}}
+
   v-card-subtitle(
     class="title py-10"
   )
@@ -44,6 +40,5 @@ export default {
 <style scoped>
 .tagline {
   font-family: Gilroy-Thin!important;
-  font-size: 7rem!important;
 }
 </style>

@@ -1,6 +1,7 @@
 <template lang="pug">
 v-timeline(
   :dense="$vuetify.breakpoint.smAndDown"
+  class="mr-6"
 )
   timeline-item(
     v-for="item in work"

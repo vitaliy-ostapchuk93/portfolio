@@ -1,6 +1,7 @@
 <template lang="pug">
 v-container(
   fluid
+  fill-height
 )
   v-row(
     v-if="$vuetify.breakpoint.lgAndUp"
