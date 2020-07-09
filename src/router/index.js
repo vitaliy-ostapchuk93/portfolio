@@ -7,7 +7,16 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/home',
+    meta: {
+      title: 'Vitaliy Ostapchuk',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'The home page of Vitaliy`s portfolio.'
+        }
+      ]
+    }
   },
   {
     path: '/home',
@@ -78,6 +87,17 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.name) {
+    document.title = 'Vitaliy Ostapchuk - ' + to.name
+  } else if (to.meta) {
+    document.title = to.meta.title
+  } else {
+    document.title = 'Vitaliy Ostapchuk'
+  }
+  next()
 })
 
 Vue.use(
