@@ -6,6 +6,13 @@ v-container(
     class="mx-auto"
     flat
   )
+    v-card-subtitle
+      v-img(
+        :src="require('../assets/undraw/on_the_office.svg')"
+        class="my-3"
+        contain
+        height="500"
+      )
     v-card-title(
       class="px-0 justify-center accent--text"
     )
@@ -23,15 +30,17 @@ v-container(
     )
       my-work
 
-  v-divider(
-    inset
-    class="ma-8"
-  )
-
   v-card(
-    class="mx-auto"
+    class="mx-auto pt-12"
     flat
   )
+    v-card-subtitle
+      v-img(
+        :src="require('../assets/undraw/certificate.svg')"
+        class="my-3"
+        contain
+        height="500"
+      )
     v-card-title(
       class="px-0 justify-center accent--text"
     )
@@ -48,15 +57,17 @@ v-container(
     )
       my-education
 
-  v-divider(
-    inset
-    class="ma-8"
-  )
-
   v-card(
-    class="mx-auto"
+    class="mx-auto pt-12"
     flat
   )
+    v-card-subtitle
+      v-img(
+        :src="require('../assets/undraw/working_from_anywhere.svg')"
+        class="my-3"
+        contain
+        height="500"
+      )
     v-card-title(
       class="px-0 justify-center accent--text"
     )

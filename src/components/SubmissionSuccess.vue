@@ -5,12 +5,13 @@ v-container(
   v-card(
    class="mx-auto fill-height"
    max-width="800"
+   :flat="$vuetify.breakpoint.mdAndUp"
   )
     v-card-title(
       class="secondary--text display-2 layout justify-center pt-12"
     )
       v-img(
-        :src="require('../assets/tick.svg')"
+        :src="require('../assets/undraw/message_sent.svg')"
         class="my-3"
         contain
         height="250"

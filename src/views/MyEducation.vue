@@ -110,16 +110,6 @@ export default {
         yearStart: 2010,
         yearEnd: 2011,
         description: ''
-      },
-      {
-        id: 'MIDDLESCHOOL',
-        degree: 'Middle School',
-        school: 'Leibnizschule, Frankfurt (Germany)',
-        website: 'https://www.leibnizschule-ffm.de/',
-        logo: require('../assets/education/logo_leibnizschule.png'),
-        yearStart: 2005,
-        yearEnd: 2010,
-        description: ''
       }
     ]
   })
