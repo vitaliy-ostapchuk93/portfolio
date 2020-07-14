@@ -8,6 +8,7 @@ v-container(
   )
     v-row(
       v-if="$vuetify.breakpoint.lgAndUp"
+      class="pa-4"
     )
       v-col(
         cols="5"
@@ -21,6 +22,7 @@ v-container(
 
     v-row(
       v-if="$vuetify.breakpoint.mdAndDown"
+      class="pa-4"
     )
       home-text
       home-logo
