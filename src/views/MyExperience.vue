@@ -4,7 +4,7 @@ v-container(
 )
   v-card(
     class="mx-auto"
-    flat
+    :flat="$vuetify.breakpoint.mdAndUp"
   )
     v-card-subtitle
       v-img(
@@ -30,10 +30,6 @@ v-container(
     )
       my-work
 
-  v-card(
-    class="mx-auto pt-12"
-    flat
-  )
     v-card-subtitle
       v-img(
         :src="require('../assets/undraw/certificate.svg')"
@@ -57,10 +53,6 @@ v-container(
     )
       my-education
 
-  v-card(
-    class="mx-auto pt-12"
-    flat
-  )
     v-card-subtitle
       v-img(
         :src="require('../assets/undraw/working_from_anywhere.svg')"
