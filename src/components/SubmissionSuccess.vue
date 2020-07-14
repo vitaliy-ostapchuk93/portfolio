@@ -14,7 +14,7 @@ v-container(
         :src="require('../assets/undraw/message_sent.svg')"
         class="my-3"
         contain
-        height="250"
+        height="400"
       )
 
     v-card-text(
