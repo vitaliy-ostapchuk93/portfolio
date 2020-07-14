@@ -39,12 +39,17 @@ v-card(
   v-container
     v-chip(
       v-for="tag in projectTags"
-      :key="tag"
+      :key="tag.title"
       class="ma-1"
       color="secondary"
       outlined
       small
-    ) {{tag}}
+    ) {{tag.title}}
+      v-icon(
+        v-if="tag.icon"
+        right
+        small
+      ) {{tag.icon}}
 
   v-card-actions
     v-btn(

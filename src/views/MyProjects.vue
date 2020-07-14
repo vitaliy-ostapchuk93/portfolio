@@ -37,14 +37,33 @@ export default {
           require('../assets/projects/master/algo.png')
         ],
         tags: [
-          'Master Thesis',
-          'Java',
-          'Tomcat',
-          'Jenkins',
-          'Pattern Mining',
-          'Big Data',
-          'HTML',
-          'CSS'
+          {
+            title: 'Java',
+            icon: 'mdi-language-java'
+          },
+          {
+            title: 'HTML',
+            icon: 'mdi-language-html5'
+          },
+          {
+            title: 'CSS',
+            icon: 'mdi-language-css3'
+          },
+          {
+            title: 'Tomcat'
+          },
+          {
+            title: 'Jenkins'
+          },
+          {
+            title: 'Master Thesis'
+          },
+          {
+            title: 'Pattern Mining'
+          },
+          {
+            title: 'Big Data'
+          }
         ],
         link: 'https://opus-hshn.bsz-bw.de/frontdoor/index/index/searchtype/all/docId/169/start/3/rows/10',
         git: 'https://github.com/vitaliy-ostapchuk93/disease-pattern-miner'
@@ -59,14 +78,35 @@ export default {
           require('../assets/projects/ara/me-holo.png')
         ],
         tags: [
-          'Augmented Reality',
-          'Haptic Interfaces',
-          'Medical Computing',
-          'Small Animal Phobia',
-          'Unity',
-          'C#',
-          'Python',
-          'Raspberry Pi'
+          {
+            title: 'Unity',
+            icon: 'mdi-unity'
+          },
+          {
+            title: 'C#',
+            icon: 'mdi-language-csharp'
+          },
+          {
+            title: 'Python',
+            icon: 'mdi-language-python'
+          },
+          {
+            title: 'Raspberry Pi',
+            icon: 'mdi-raspberry-pi'
+          },
+          {
+            title: 'Augmented Reality',
+            icon: 'mdi-augmented-reality'
+          },
+          {
+            title: 'Haptic Interfaces'
+          },
+          {
+            title: 'Small Animal Phobia'
+          },
+          {
+            title: 'Medical Computing'
+          }
         ],
         link: 'https://ieeexplore.ieee.org/abstract/document/8904800/keywords#keywords'
       },
@@ -81,15 +121,41 @@ export default {
           require('../assets/projects/portfolio/timeline-desktop-2.png')
         ],
         tags: [
-          'Vue',
-          'Netlify',
-          'YARN',
-          'JavaScript',
-          'Express',
-          'Vuetify',
-          'NodeJS',
-          'SASS',
-          'Pug'
+          {
+            title: 'NodeJS',
+            icon: 'mdi-nodejs'
+          },
+          {
+            title: 'Vue',
+            icon: 'mdi-vuejs'
+          },
+          {
+            title: 'JavaScript',
+            icon: 'mdi-language-javascript'
+          },
+          {
+            title: 'HTML',
+            icon: 'mdi-language-html5'
+          },
+          {
+            title: 'Vuetify',
+            icon: 'mdi-vuetify'
+          },
+          {
+            title: 'Netlify'
+          },
+          {
+            title: 'YARN'
+          },
+          {
+            title: 'Express'
+          },
+          {
+            title: 'SASS'
+          },
+          {
+            title: 'Pug'
+          }
         ],
         link: 'https://vitaliy-ostapchuk.netlify.app',
         git: 'https://github.com/vitaliy-ostapchuk93/portfolio'
@@ -105,12 +171,25 @@ export default {
           require('../assets/projects/bachelor/mandibula-reconstruction.png')
         ],
         tags: [
-          'Bachelor Thesis',
-          'Medical Image Computing',
-          'C++',
-          'Qt',
-          'Signal Processing',
-          'Usability'
+          {
+            title: 'C++',
+            icon: 'mdi-language-cpp'
+          },
+          {
+            title: 'Qt'
+          },
+          {
+            title: 'Bachelor Thesis'
+          },
+          {
+            title: 'Medical Image Computing'
+          },
+          {
+            title: 'Signal Processing'
+          },
+          {
+            title: 'Usability'
+          }
         ]
       }
     ]

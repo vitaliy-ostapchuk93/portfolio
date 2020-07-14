@@ -1,7 +1,7 @@
 <template lang="pug">
 v-app
   app-header
-  v-content
+  v-main
     v-container(
       fluid
       class="pa-4 fill-height"
