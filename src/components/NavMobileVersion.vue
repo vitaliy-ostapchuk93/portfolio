@@ -16,8 +16,11 @@ div
       nav
       shaped
       class="text-uppercase"
+      height="100%"
     )
-      v-list-item
+      v-list-item(
+        class="mobile-top-bar"
+      )
         app-logo
         v-spacer
         v-app-bar-nav-icon
@@ -26,7 +29,10 @@ div
             class="my-4"
             icon
           )
-            v-icon(size="24px") mdi-close
+            v-icon(
+              size="24px"
+              color="primary"
+            ) mdi-close
 
       v-divider
 
@@ -43,18 +49,32 @@ div
           text
         )
           v-list-item-icon
-            v-icon(left) {{item.icon}}
+            v-icon(
+              left
+              color="primary"
+            ) {{item.icon}}
           v-list-item-title
-            span {{item.text}}
+            span(
+              class="primary--text"
+            ) {{item.text}}
 
       v-spacer
 
-      v-container
-        social-networks
-        p(
-          class="my-4 font-weight-light font-italic body-2"
+      v-container(
+        class="fix-bottom"
+        fluid
+      )
+         v-row(
+          align="center"
+          justify="center"
         )
-          | &copy; {{ new Date().getFullYear() }} — Designed & Built by Vitaliy Ostapchuk
+          social-networks(
+            v-bind:isDark="false"
+          )
+          p(
+            class="my-4 primary--text font-weight-light font-italic body-2"
+          )
+            | &copy; {{ new Date().getFullYear() }} — Designed & Built by Vitaliy Ostapchuk
 
 
 </template>
