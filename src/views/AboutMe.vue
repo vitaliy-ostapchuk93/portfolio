@@ -1,37 +1,99 @@
 <template lang="pug">
 v-container(
-  fluid
+  class="pa-0"
 )
   v-card(
-    class="mx-auto fill-height"
-    max-width="800"
+    class="mx-auto"
     :flat="$vuetify.breakpoint.mdAndUp"
   )
     v-card-subtitle
       v-img(
-        :src="require('../assets/undraw/profile.svg')"
+        :src="require('../assets/undraw/on_the_office.svg')"
         class="my-3"
         contain
         height="500"
       )
     v-card-title(
-      class="accent--text layout justify-center"
+      class="px-0 justify-center accent--text"
     )
+      v-icon(
+        x-large
+        color="accent"
+        class="ma-4"
+      ) mdi-briefcase
       p(
-        v-if="$vuetify.breakpoint.lgAndUp"
-        class="tagline font-weight-medium display-4"
-      ) {{title}}
+        class="tagline ma-4 font-weight-medium display-2"
+      ) {{work}}
+
+    v-card-text(
+      class="pa-0"
+    )
+      my-work
+
+    v-card-subtitle
+      v-img(
+        :src="require('../assets/undraw/certificate.svg')"
+        class="my-3"
+        contain
+        height="500"
+      )
+    v-card-title(
+      class="px-0 justify-center accent--text"
+    )
+      v-icon(
+        large
+        color="accent"
+        class="ma-4"
+      ) mdi-school
       p(
-        v-if="$vuetify.breakpoint.mdAndDown"
-        class="tagline font-weight-medium display-2"
-      ) {{title}}
+        class="tagline ma-4 font-weight-medium display-2"
+      ) {{education}}
+    v-card-text(
+      class="pa-0"
+    )
+      my-education
+
+    v-card-subtitle
+      v-img(
+        :src="require('../assets/undraw/working_from_anywhere.svg')"
+        class="my-3"
+        contain
+        height="500"
+      )
+    v-card-title(
+      class="px-0 justify-center accent--text"
+    )
+      v-icon(
+        large
+        color="accent"
+        class="ma-4"
+      ) mdi-rocket-launch
+      p(
+        class="tagline ma-4 font-weight-medium display-2"
+      ) {{projects}}
+    v-card-text(
+      class="pa-0"
+    )
+      my-projects
+
 </template>
 
 <script>
+import MyWork from './MyWork'
+import MyEducation from './MyEducation'
+import MyProjects from './MyProjects'
+
 export default {
-  name: 'About',
+  name: 'Experience',
+  components: {
+    MyWork,
+    MyEducation,
+    MyProjects
+  },
   data: () => ({
-    title: 'about me ...'
+    work: 'Work',
+    education: 'Education',
+    projects: 'Projects & Other'
   })
 }
 </script>
