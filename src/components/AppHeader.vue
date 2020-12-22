@@ -1,9 +1,10 @@
 <template lang="pug">
 v-app-bar(
   app
-  dark
-  class="primary"
-  height="70"
+  flat
+  class="center-elem white"
+  height="90"
+  max-width="1500"
 )
   app-logo
   v-spacer
@@ -41,14 +42,8 @@ export default {
       {
         icon: 'mdi-information-variant',
         link: '/about',
-        title: 'Some things about me',
-        text: 'About'
-      },
-      {
-        icon: 'mdi-electron-framework',
-        link: '/experience',
-        title: 'Portfolio & some things I\'ve built',
-        text: 'Experience'
+        title: 'Some things about me, portfolio & some things I\'ve built',
+        text: 'About Me'
       },
       {
         icon: 'mdi-card-account-mail',

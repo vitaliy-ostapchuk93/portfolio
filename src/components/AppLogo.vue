@@ -1,11 +1,16 @@
 <template lang="pug">
-v-img(
-  :src="require('../assets/logo.svg')"
-  class="mr-3"
-  contain
-  max-height="40"
-  max-width="120"
+v-btn(
+  text
+  title="Home"
+  href="/home"
 )
+  v-img(
+    :src="require('../assets/logo-transparent.svg')"
+    class="mr-3"
+    contain
+    max-height="80"
+    max-width="180"
+  )
 </template>
 
 <script>

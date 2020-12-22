@@ -8,7 +8,6 @@ div
   v-navigation-drawer(
     app
     v-model="sidebar"
-    class="primary"
     right
     width="100%"
     hide-overlay
