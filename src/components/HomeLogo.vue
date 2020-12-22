@@ -21,6 +21,7 @@
 //-       )
 v-container(
   fluid
+  class="pa-6"
 )
   v-row
     v-img(
