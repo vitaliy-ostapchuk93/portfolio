@@ -16,7 +16,7 @@ div
       nav
       shaped
       class="text-uppercase"
-      height="100%"
+      height="80%"
     )
       v-list-item(
         class="mobile-top-bar"
