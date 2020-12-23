@@ -16,7 +16,6 @@ div
       nav
       shaped
       class="text-uppercase"
-      height="80%"
     )
       v-list-item(
         class="mobile-top-bar"
@@ -37,7 +36,6 @@ div
       v-divider
 
       v-list-item-group(
-        v-model="menu"
         class="pa-4"
       )
         v-list-item(
@@ -58,13 +56,11 @@ div
               class="primary--text"
             ) {{item.text}}
 
-      v-spacer
 
-      v-container(
+      v-list-item(
         class="fix-bottom"
-        fluid
       )
-         v-row(
+        v-container(
           align="center"
           justify="center"
         )
