@@ -18,6 +18,8 @@ v-container
 </template>
 
 <script>
+import i18n from '@/plugins/vue-i18n'
+
 import ProjectItem from '../components/ProjectItem'
 
 export default {
@@ -28,8 +30,8 @@ export default {
   data: () => ({
     projects: [
       {
-        name: 'Disease Pattern Miner',
-        description: 'Disease Pattern Miner is a free, open-source mining framework for interactively discovering sequential disease patterns in medical health record datasets ...',
+        name: i18n.t('projects_disease_miner_name'),
+        description: i18n.t('projects_disease_miner_description'),
         pictures: [
           require('../assets/projects/master/dashboard.png'),
           require('../assets/projects/master/explorer.png'),
@@ -50,13 +52,16 @@ export default {
             icon: 'mdi-language-css3'
           },
           {
-            title: 'Tomcat'
+            title: 'Tomcat',
+            iconSrc: require('../assets/icons/tomcat.svg')
           },
           {
-            title: 'Jenkins'
+            title: 'Jenkins',
+            iconSrc: require('../assets/icons/jenkins.svg')
           },
           {
-            title: 'Master Thesis'
+            title: 'Master Thesis',
+            iconSrc: require('../assets/icons/graduate.png')
           },
           {
             title: 'Pattern Mining'
@@ -70,7 +75,7 @@ export default {
       },
       {
         name: 'ARA',
-        description: 'Exposure therapy in Augmented Reality has proven its effectiveness in the treatment of small animal phobia. However, the conventional Augmented Reality Exposure Therapy confronts the user with visual stimulation only. The proposed concept called ARA aims to enhance the sense of realism by adding vibrotactile feedback to Augmented Reality Exposure Therapy ...',
+        description: i18n.t('projects_ara_description'),
         pictures: [
           require('../assets/projects/ara/concept.jpg'),
           require('../assets/projects/ara/sleeve-and-holo.jpg'),
@@ -112,7 +117,7 @@ export default {
       },
       {
         name: 'Portfolio',
-        description: 'My personal portfolio built with Vue and hosted with Netlify ...',
+        description: i18n.t('projects_portfolio_description'),
         pictures: [
           require('../assets/projects/portfolio/home-desktop.png'),
           require('../assets/projects/portfolio/home-mobile.png'),
@@ -161,8 +166,8 @@ export default {
         git: 'https://github.com/vitaliy-ostapchuk93/portfolio'
       },
       {
-        name: 'Navigation-assisted fibula reconstruction',
-        description: '',
+        name: i18n.t('project_bachelor_name'),
+        description: i18n.t('project_bachelor_description'),
         pictures: [
           require('../assets/projects/bachelor/computer-assisted-nav.png'),
           require('../assets/projects/bachelor/nav-exp.png'),
@@ -179,7 +184,8 @@ export default {
             title: 'Qt'
           },
           {
-            title: 'Bachelor Thesis'
+            title: 'Bachelor Thesis',
+            iconSrc: require('../assets/icons/graduate.png')
           },
           {
             title: 'Medical Image Computing'

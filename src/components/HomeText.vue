@@ -31,13 +31,15 @@ v-card(
 </template>
 
 <script>
+import i18n from '@/plugins/vue-i18n'
+
 export default {
   name: 'HomeText',
   data: () => ({
-    tagline: "let's build something great!",
-    intro: 'Hi, my name is',
-    name: 'Vitaliy Ostapchuk.',
-    description: "I'm a 3D Software Engineer based in Stuttgart (Germany) specializing in building and occasionally designing exceptional, high-quality applications and websites."
+    tagline: i18n.t('home_tagline'),
+    intro: i18n.t('home_intro'),
+    name: i18n.t('home_name'),
+    description: i18n.t('home_description')
   })
 }
 </script>
