@@ -1,7 +1,7 @@
 <template lang="pug">
 v-app-bar(
   app
-  flat
+  :flat="$vuetify.breakpoint.mdAndUp"
   class="center-elem white"
   height="90"
   max-width="1500"
