@@ -6,7 +6,7 @@ import messages from '@/assets/locales'
 Vue.use(VueI18n)
 
 export default new VueI18n({
-  locale: 'de_DE',
+  locale: 'en_US',
   fallbackLocale: 'en_US',
   messages
 })
