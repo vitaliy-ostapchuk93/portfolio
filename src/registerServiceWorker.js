@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+/* jshint -W033 */
 
 import { register } from 'register-service-worker'
 

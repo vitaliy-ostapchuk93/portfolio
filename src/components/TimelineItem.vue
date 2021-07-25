@@ -21,7 +21,12 @@ v-timeline-item(
       primary-title
       class="pa-4 pt-8 overline secondary--text"
     )
-      h2 {{head}} &#64;
+      h2(
+        v-if="title"
+      ) {{head}} &#64;
+      h2(
+        v-else
+      ) {{head}}
 
     timeline-item-title(
       v-if="$vuetify.breakpoint.mdAndUp"

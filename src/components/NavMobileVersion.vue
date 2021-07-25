@@ -8,7 +8,6 @@ div
   v-navigation-drawer(
     app
     v-model="sidebar"
-    class="primary"
     right
     width="100%"
     hide-overlay
@@ -18,7 +17,9 @@ div
       shaped
       class="text-uppercase"
     )
-      v-list-item
+      v-list-item(
+        class="mobile-top-bar"
+      )
         app-logo
         v-spacer
         v-app-bar-nav-icon
@@ -27,12 +28,14 @@ div
             class="my-4"
             icon
           )
-            v-icon(size="24px") mdi-close
+            v-icon(
+              size="24px"
+              color="primary"
+            ) mdi-close
 
       v-divider
 
       v-list-item-group(
-        v-model="menu"
         class="pa-4"
       )
         v-list-item(
@@ -44,18 +47,30 @@ div
           text
         )
           v-list-item-icon
-            v-icon(left) {{item.icon}}
+            v-icon(
+              left
+              color="primary"
+            ) {{item.icon}}
           v-list-item-title
-            span {{item.text}}
+            span(
+              class="primary--text"
+            ) {{item.text}}
 
-      v-spacer
 
-      v-container
-        social-networks
-        p(
-          class="my-4 font-weight-light font-italic body-2"
+      v-list-item(
+        class="fix-bottom"
+      )
+        v-container(
+          align="center"
+          justify="center"
         )
-          | &copy; {{ new Date().getFullYear() }} — Designed & Built by Vitaliy Ostapchuk
+          social-networks(
+            v-bind:isDark="false"
+          )
+          p(
+            class="my-4 primary--text font-weight-light font-italic body-2"
+          )
+            | &copy; {{ new Date().getFullYear() }} — Designed & Built by Vitaliy Ostapchuk
 
 
 </template>

@@ -1,10 +1,12 @@
 <template lang="pug">
-v-app
+v-app(
+  max-width="1400"
+)
   app-header
   v-main
     v-container(
       fluid
-      class="pa-4 fill-height"
+      class="pa-4 fill-height main-view"
     )
       transition(
         name="fade"

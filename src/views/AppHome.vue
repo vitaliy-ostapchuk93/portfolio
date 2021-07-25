@@ -5,6 +5,7 @@ v-container(
 )
   v-card(
    :flat="$vuetify.breakpoint.mdAndUp"
+    class="mx-auto fill-height"
   )
     v-row(
       v-if="$vuetify.breakpoint.lgAndUp"

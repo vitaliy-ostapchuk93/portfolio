@@ -13,7 +13,9 @@ v-footer(
       class="py-4 text-center"
       cols="12"
     )
-      social-networks
+      social-networks(
+        v-bind:isDark="true"
+      )
 
     v-divider
 

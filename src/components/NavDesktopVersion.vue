@@ -7,8 +7,9 @@ div
     :href="item.link"
     text
   )
-    v-icon(left) {{item.icon}}
-    span {{item.text}}
+    h2(
+      class="primary--text"
+    ) {{item.text}}
 </template>
 
 <script>
@@ -28,6 +29,6 @@ export default {
 
 <style scoped>
 .v-btn:hover {
-  background: #1362e2;
+  color: #1362e2;
 }
 </style>

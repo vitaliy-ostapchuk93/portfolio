@@ -53,7 +53,7 @@ v-container(
           v-text-field(
             v-model="name"
             :error-messages="nameErrors"
-            label="Name"
+            :label="$t('contact_name')"
             name="name"
             required
             @input="$v.name.$touch()"
@@ -62,7 +62,7 @@ v-container(
           v-text-field(
             v-model="email"
             :error-messages="emailErrors"
-            label="E-mail"
+            :label="$t('contact_email')"
             name="email"
             required
             @input="$v.email.$touch()"
@@ -71,7 +71,7 @@ v-container(
           v-textarea(
             v-model="message"
             :error-messages="messageErrors"
-            label="Message"
+            :label="$t('contact_message')"
             name="message"
             required
             @input="$v.message.$touch()"
@@ -103,6 +103,8 @@ v-container(
 </template>
 
 <script>
+import i18n from '@/plugins/vue-i18n'
+
 import { validationMixin } from 'vuelidate'
 import { required, email } from 'vuelidate/lib/validators'
 
@@ -115,13 +117,13 @@ export default {
     message: { required }
   },
   data: () => ({
-    title: 'get in touch!',
-    description: "Although I'm not currently looking for freelance opportunities, my inbox is always open. Whether for a potential project or just to say hi, I'll try my best to answer your email!",
+    title: i18n.t('contact_tagline'),
+    description: i18n.t('contact_description'),
     name: '',
     email: '',
     message: '',
-    submitBtn: 'Submit',
-    clearBtn: 'Clear'
+    submitBtn: i18n.t('contact_submit'),
+    clearBtn: i18n.t('contact_clear')
   }),
   computed: {
     form () {
@@ -134,20 +136,20 @@ export default {
     nameErrors () {
       const errors = []
       if (!this.$v.name.$dirty) return errors
-      !this.$v.name.required && errors.push('Name is required.')
+      !this.$v.name.required && errors.push(i18n.t('contact_error_name_required'))
       return errors
     },
     emailErrors () {
       const errors = []
       if (!this.$v.email.$dirty) return errors
-      !this.$v.email.email && errors.push('Must be valid e-mail')
-      !this.$v.email.required && errors.push('E-mail is required')
+      !this.$v.email.email && errors.push(i18n.t('contact_error_email_invalid'))
+      !this.$v.email.required && errors.push(i18n.t('contact_error_email_required'))
       return errors
     },
     messageErrors () {
       const errors = []
       if (!this.$v.message.$dirty) return errors
-      !this.$v.message.required && errors.push('Message content is required.')
+      !this.$v.message.required && errors.push(i18n.t('contact_error_message_required'))
       return errors
     }
   },

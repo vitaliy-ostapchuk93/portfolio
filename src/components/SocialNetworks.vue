@@ -1,21 +1,36 @@
 <template lang="pug">
 v-container(
   min-width="360px"
+  fluid
 )
-  v-btn(
-    v-for="profile in profiles"
-    :key="profile.icon"
-    :href="profile.link"
-    target="_blank"
-    class="mx-4"
-    icon
+  v-row(
+    align="center"
+    justify="center"
   )
-    v-icon(size="24px") {{profile.icon}}
+    v-btn(
+      v-for="profile in profiles"
+      :key="profile.icon"
+      :href="profile.link"
+      target="_blank"
+      class="mx-4"
+      icon
+    )
+      v-icon(
+        size="24px"
+        :color="iconColor"
+      ) {{profile.icon}}
 </template>
 
 <script>
 export default {
   name: 'SocialNetworks',
+  props: {
+    isDark: {
+      type: Boolean,
+      required: false,
+      default: true
+    }
+  },
   data: () => ({
     profiles: [
       {
@@ -35,7 +50,12 @@ export default {
         link: 'mailto:vitaliy.ostapchuk93@gmail.com'
       }
     ]
-  })
+  }),
+  computed: {
+    iconColor: function () {
+      return this.isDark ? 'white' : 'primary'
+    }
+  }
 }
 </script>
 

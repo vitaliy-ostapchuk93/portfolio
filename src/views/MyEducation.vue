@@ -18,6 +18,8 @@ v-timeline(
 </template>
 
 <script>
+import i18n from '@/plugins/vue-i18n'
+
 import TimelineItem from '../components/TimelineItem'
 
 export default {
@@ -29,10 +31,10 @@ export default {
     education: [
       {
         id: 'MASTER',
-        degree: 'M.Sc. in Medical Informatics',
+        degree: i18n.t('education_master'),
         school: [
-          'Ruprecht Karl University of Heidelberg',
-          'Heilbronn University of Applied Sciences'
+          i18n.t('education_uni_heidelberg'),
+          i18n.t('education_hs_heilbronn')
         ],
         website: [
           'https://www.uni-heidelberg.de/en/study/all-subjects/medical-informatics/medical-informatics-master',
@@ -45,21 +47,21 @@ export default {
         yearStart: 2017,
         yearEnd: 2019,
         description: {
-          thesis: 'Implementation of an interactive pattern mining framework on electronic health record datasets',
+          thesis: i18n.t('education_master_thesis'),
           link: 'https://opus-hshn.bsz-bw.de/frontdoor/index/index/searchtype/all/docId/169/start/2/rows/10',
           modules: [
-            'Medical Image and Signal Processing',
-            'Digital Media',
-            'Data Mining',
-            'Scientific Computing',
-            'Innovative interaction technologies'
+            i18n.t('education_modules_mbs'),
+            i18n.t('education_modules_dmed'),
+            i18n.t('education_modules_dm'),
+            i18n.t('education_modules_sc'),
+            i18n.t('education_modules_ii')
           ]
         }
 
       },
       {
         id: 'MASTERTAIWAN',
-        degree: 'M.Sc. in Medical Informatics (Thesis)',
+        degree: i18n.t('education_master_tw'),
         school: 'Taipei Medical University, Taipei (Taiwan)',
         website: 'http://eng.tmu.edu.tw/',
         logo: require('../assets/education/logo_tmu.png'),
@@ -69,10 +71,10 @@ export default {
       },
       {
         id: 'BACHELOR',
-        degree: 'B.Sc. in Medical Informatics',
+        degree: i18n.t('education_bachelor'),
         school: [
-          'Ruprecht Karl University of Heidelberg',
-          'Heilbronn University of Applied Sciences'
+          i18n.t('education_uni_heidelberg'),
+          i18n.t('education_hs_heilbronn')
         ],
         website: [
           'https://www.uni-heidelberg.de/en/study/all-subjects/medical-informatics/medical-informatics-bachelor-100',
@@ -85,15 +87,15 @@ export default {
         yearStart: 2013,
         yearEnd: 2017,
         description: {
-          thesis: 'Design and implementation of a software component for surface scanning of fibula grafts for navigation-assisted mandibular reconstruction',
+          thesis: i18n.t('education_bachelor_thesis'),
           modules: [
-            'Medical Image and Signal Processing'
+            i18n.t('education_modules_mbs')
           ]
         }
       },
       {
         id: 'HIGHSCHOOL1',
-        degree: 'High School',
+        degree: i18n.t('education_highschool'),
         school: 'Friedrich-Dessauer-Gymnasium, Frankfurt (Germany)',
         website: 'https://www.fdg-frankfurt.de/',
         logo: require('../assets/education/logo_fdg.png'),
@@ -103,7 +105,7 @@ export default {
       },
       {
         id: 'HIGHSCHOOL2',
-        degree: 'High School',
+        degree: i18n.t('education_gymnasium'),
         school: 'Elizabethtown High School, Elizabethtown KY (USA)',
         website: 'https://www.etown.k12.ky.us/1/Home',
         logo: require('../assets/education/logo_etown.png'),

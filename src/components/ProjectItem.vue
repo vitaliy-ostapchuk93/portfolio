@@ -50,6 +50,16 @@ v-card(
         right
         small
       ) {{tag.icon}}
+      v-avatar(
+        v-if="tag.iconSrc"
+        right
+      )
+        v-img(
+          :src="tag.iconSrc"
+          class="my-3 align-self-center"
+          max-height="16"
+          max-width="16"
+        )
 
   v-card-actions
     v-btn(

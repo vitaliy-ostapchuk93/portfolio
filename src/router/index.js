@@ -1,3 +1,6 @@
+/* jshint -W033 */
+/* jshint -W024 */
+
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueGtag from 'vue-gtag'
@@ -27,11 +30,6 @@ const routes = [
     path: '/about',
     name: 'About',
     component: () => import('../views/AboutMe.vue')
-  },
-  {
-    path: '/experience',
-    name: 'Experience',
-    component: () => import('../views/MyExperience.vue')
   },
   {
     path: '/work',
