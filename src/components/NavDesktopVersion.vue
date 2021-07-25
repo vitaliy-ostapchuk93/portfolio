@@ -13,7 +13,7 @@ div
 
 <script>
 export default {
-  name: 'NavMobileVersion',
+  name: 'NavDesktopVersion',
   props: {
     menu: {
       type: Array,
